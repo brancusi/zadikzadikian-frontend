@@ -1,0 +1,9 @@
+{
+  "extends": ["html-validate:recommended", "html-validate:a11y"],
+  "rules": {
+    "long-title": "off",
+    "no-inline-style": "off",
+    "prefer-native-element": "error",
+    "wcag/h63": "error"
+  }
+}

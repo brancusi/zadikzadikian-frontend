@@ -1,0 +1,68 @@
+---
+import { getCollection } from 'astro:content';
+import EditorialNote from '../components/EditorialNote.astro';
+import FixtureArtwork from '../components/FixtureArtwork.astro';
+import WorkCard from '../components/WorkCard.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const series = (await getCollection('series')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout
+  title="Zadik Zadikian"
+  description="A noindex design preview for a modern Zadik Zadikian artist website. Original fixture graphics only; content remains under review."
+  bodyClass="home-page"
+>
+  <section class="hero" aria-labelledby="home-title">
+    <div class="hero__copy">
+      <div>
+        <p class="eyebrow">Artist website · design direction 01</p>
+        <h1 id="home-title">Zadik<br />Zadikian</h1>
+      </div>
+      <div class="hero__intro">
+        <p>A quiet, material-led preview for an artist archive shaped by structure, repetition, scale, and transformation.</p>
+        <p class="hero__index">Preview<br />01 / 01</p>
+      </div>
+    </div>
+    <FixtureArtwork
+      variant="threshold"
+      ratio="hero"
+      description="Original geometric study for the preview's first screen."
+    />
+  </section>
+
+  <section class="page-shell content-section" aria-labelledby="selected-work-heading">
+    <div class="section-heading">
+      <p class="eyebrow">Selected directions</p>
+      <h2 id="selected-work-heading">Work, with room to breathe.</h2>
+    </div>
+    <ol class="work-grid">
+      {series.map((entry, index) => (
+        <li><WorkCard entry={entry} index={index} /></li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="page-shell content-section" aria-labelledby="practice-heading">
+    <div class="practice-block">
+      <div>
+        <p class="eyebrow">Editorial approach</p>
+        <h2 id="practice-heading" class="visually-hidden">Editorial approach</h2>
+      </div>
+      <div>
+        <blockquote>Material first. Exact records next. No assumption presented as biography.</blockquote>
+        <div class="practice-block__body">
+          <p>The completed research identifies gold, repetition, architecture, labor, displacement, and material transformation as recurring fields for future editorial development.</p>
+          <p>This preview tests that visual and information hierarchy without importing the current site's media or treating unresolved source material as approved copy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-shell content-section" aria-labelledby="boundary-heading">
+    <h2 id="boundary-heading" class="visually-hidden">Preview content boundary</h2>
+    <EditorialNote title="Review boundary">
+      <p><strong>Everything visual is a purpose-made fixture.</strong> It is not artwork by Zadik Zadikian and does not stand in for a final crop, credit, or alt description.</p>
+      <p>Biographical dates, studio details, representation, project status, portrait rights, video, and route migration decisions remain outside this preview.</p>
+    </EditorialNote>
+  </section>
+</BaseLayout>

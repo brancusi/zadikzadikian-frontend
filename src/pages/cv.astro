@@ -1,0 +1,74 @@
+---
+import EditorialNote from '../components/EditorialNote.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  {
+    title: 'Solo exhibitions',
+    entries: [
+      ['Verified year', '[Approved exhibition title]', 'Institution · City, country'],
+      ['Verified year', '[Approved exhibition title]', 'Institution · City, country'],
+    ],
+  },
+  {
+    title: 'Selected group exhibitions',
+    entries: [
+      ['Verified range', '[Approved exhibition title]', 'Institution · City, country'],
+      ['Verified year', '[Approved exhibition title]', 'Institution · City, country'],
+    ],
+  },
+  {
+    title: 'Projects and awards',
+    entries: [
+      ['Verified year', '[Approved project or award]', 'Context and source'],
+    ],
+  },
+];
+---
+<BaseLayout
+  title="CV — Preview treatment"
+  description="A structured CV treatment for the noindex Zadik Zadikian website preview. Model entries are not public factual claims."
+>
+  <div class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Web-first CV · model entries only</p>
+        <h1>CV</h1>
+      </div>
+      <p class="page-header__intro">A precise, scannable chronology prepared for one verified source of truth. The current public résumé has not been republished here.</p>
+    </header>
+
+    <section class="content-section" aria-labelledby="cv-boundary-heading">
+      <h2 id="cv-boundary-heading" class="visually-hidden">CV preview boundary</h2>
+      <EditorialNote title="Not factual entries">
+        <p>Every bracketed row below is an interface model—not an exhibition, date, institution, award, or biographical claim.</p>
+        <p>The launch CV must resolve source conflicts, category anomalies, titles, locations, and chronology through owner review.</p>
+      </EditorialNote>
+    </section>
+
+    <section aria-labelledby="sample-cv-structure-heading">
+      <h2 id="sample-cv-structure-heading" class="visually-hidden">Sample CV structure</h2>
+      {sections.map((section) => (
+        <section class="cv-section" aria-labelledby={`cv-${section.title.toLowerCase().replaceAll(' ', '-')}`}>
+          <h2 id={`cv-${section.title.toLowerCase().replaceAll(' ', '-')}`}>{section.title}</h2>
+          <dl class="cv-list">
+            {section.entries.map(([date, title, context]) => (
+              <div>
+                <dt>{date}</dt>
+                <dd><strong>{title}</strong><span>{context}</span></dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      ))}
+    </section>
+
+    <section class="content-section" aria-labelledby="cv-policy-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Production principle</p>
+        <h2 id="cv-policy-heading">HTML first. PDF from the same data.</h2>
+        <p>The future downloadable CV should be generated from the same reviewed records as this page, preventing silent divergence between formats.</p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,89 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import EditorialNote from '../../components/EditorialNote.astro';
+import FixtureArtwork from '../../components/FixtureArtwork.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('series');
+  return entries.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'series'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const allSeries = (await getCollection('series')).sort((a, b) => a.data.order - b.data.order);
+const currentIndex = allSeries.findIndex((item) => item.id === entry.id);
+const previous = currentIndex > 0 ? allSeries[currentIndex - 1] : undefined;
+const next = currentIndex < allSeries.length - 1 ? allSeries[currentIndex + 1] : undefined;
+---
+<BaseLayout
+  title={`${entry.data.title} — Sample series`}
+  description={entry.data.description}
+>
+  <article>
+    <header class="series-hero">
+      <div class="series-hero__copy">
+        <div>
+          <p class="eyebrow">{entry.data.recordLabel}</p>
+          <h1>{entry.data.title}</h1>
+        </div>
+        <p class="series-hero__intro">{entry.data.intro}</p>
+      </div>
+      <FixtureArtwork
+        variant={entry.data.fixture}
+        ratio="hero"
+        description={`Original abstract study for the ${entry.data.title} sample layout.`}
+      />
+    </header>
+
+    <div class="series-details">
+      <aside aria-labelledby="record-status-heading">
+        <p id="record-status-heading" class="eyebrow">Record status</p>
+        <ul class="record-list">
+          <li>Dates · pending verification</li>
+          <li>Materials · pending verification</li>
+          <li>Dimensions · pending verification</li>
+          <li>Images and credits · rights approval required</li>
+        </ul>
+      </aside>
+      <div class="prose">
+        <Content />
+      </div>
+    </div>
+
+    <section class="page-shell content-section" aria-labelledby="sample-records-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Object-level treatment</p>
+        <h2 id="sample-records-heading">A record, not just a gallery.</h2>
+        <p>Three neutral placeholders demonstrate how future works could carry consistent, source-reviewed metadata without implying that these shapes are artist objects.</p>
+      </div>
+      <div class="sample-records">
+        {[1, 2, 3].map((number) => (
+          <article class="sample-record">
+            <div class="sample-record__shape" aria-hidden="true"></div>
+            <h3>Sample record 0{number}</h3>
+            <p>Title, date, materials, dimensions, context, and image credit pending approval.</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="page-shell content-section" aria-labelledby="sample-boundary-heading">
+      <h2 id="sample-boundary-heading" class="visually-hidden">Sample page boundary</h2>
+      <EditorialNote>
+        <p>{entry.data.description}</p>
+      </EditorialNote>
+      <nav class="record-navigation" aria-label="Sample series navigation">
+        <p>{previous ? <a href={`/work/${previous.id}/`}>← Previous: {previous.data.title}</a> : <a href="/work/">← Work index</a>}</p>
+        <p>{next ? <a href={`/work/${next.id}/`}>Next: {next.data.title} →</a> : <a href="/work/">Work index →</a>}</p>
+      </nav>
+    </section>
+  </article>
+</BaseLayout>

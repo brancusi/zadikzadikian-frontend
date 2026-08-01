@@ -1,0 +1,29 @@
+{
+  "name": "zadikzadikian-preview",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.18.0",
+  "engines": {
+    "node": "24.18.0",
+    "pnpm": "11.18.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "astro build && vitest run && html-validate \"dist/**/*.html\"",
+    "test:built": "vitest run && html-validate \"dist/**/*.html\"",
+    "validate": "astro check && astro build && vitest run && html-validate \"dist/**/*.html\""
+  },
+  "dependencies": {
+    "astro": "7.1.6"
+  },
+  "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "html-validate": "11.6.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.10"
+  }
+}
