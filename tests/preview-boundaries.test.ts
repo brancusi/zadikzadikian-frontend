@@ -69,7 +69,7 @@ describe('generated preview boundaries', () => {
     expect(home.match(/Preview fixture—not an artwork\./g)?.length).toBeGreaterThanOrEqual(4);
     expect(sample).toContain('Sample series page');
     expect(sample).toContain('Images and credits · rights approval required');
-    expect(sample).toContain('Original abstract study');
+    expect(sample).toContain('original abstract study');
   });
 
   it('ships a closed robots policy and Netlify noindex header', () => {
@@ -81,9 +81,17 @@ describe('generated preview boundaries', () => {
     expect(netlify).toContain("form-action 'none'");
   });
 
-  it('contains no downloaded production media fixtures', () => {
+  it('contains only tiny, checksummed project-created media studies', () => {
     const publicFiles = filesBelow(join(root, 'public'));
+    const fixtureFiles = filesBelow(join(root, 'src', 'assets', 'media', 'fixtures'));
+    const fixtureBytes = fixtureFiles.reduce((total, path) => total + statSync(path).size, 0);
+
+    expect(fixtureFiles).toHaveLength(5);
+    fixtureFiles.forEach((path) => expect(path).toMatch(/--[0-9a-f]{12}\.png$/));
+    expect(fixtureBytes).toBeLessThan(64 * 1024);
     expect(publicFiles.some((path) => /\.(?:jpe?g|png|webp|gif|mp4|mov)$/i.test(path))).toBe(false);
+    expect(filesBelow(join(root, 'src')).some((path) => /\.(?:mp4|mov|m3u8)$/i.test(path))).toBe(false);
+    expect(readFileSync(join(root, 'CONTENT-LICENSE.md'), 'utf8')).toContain('CC0 1.0');
     expect(existsSync(join(root, 'public', 'favicon.svg'))).toBe(true);
   });
 });

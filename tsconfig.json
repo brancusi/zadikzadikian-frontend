@@ -4,6 +4,7 @@
   "exclude": ["dist"],
   "compilerOptions": {
     "allowJs": false,
+    "allowImportingTsExtensions": true,
     "noUncheckedIndexedAccess": true
   }
 }

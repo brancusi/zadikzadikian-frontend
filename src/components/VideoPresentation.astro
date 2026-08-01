@@ -1,0 +1,48 @@
+---
+import { getVideoRecord } from '../data/media';
+import { publicMediaUrl, resolveVideoPresentation } from '../lib/media/video-provider';
+import ArtworkImage from './ArtworkImage.astro';
+
+interface Props {
+  videoId: string;
+  posterPlacementId: string;
+  title: string;
+}
+
+const { videoId, posterPlacementId, title } = Astro.props;
+const video = getVideoRecord(videoId);
+const presentation = resolveVideoPresentation(video);
+const captions = video.accessibility.captions[0];
+if (!captions) throw new Error(`Video ${video.id} has no caption track`);
+const transcript = video.accessibility.transcript;
+const duration = `${Math.floor(video.durationSeconds / 60)}:${String(video.durationSeconds % 60).padStart(2, '0')}`;
+---
+<div class="video-study" data-video-id={video.id} data-video-provider="none">
+  <div class="video-study__poster">
+    <ArtworkImage
+      mediaId={video.poster.mediaId}
+      placementId={posterPlacementId}
+      sizes="(max-width: 56rem) 100vw, 66vw"
+      aspectRatio={`${video.width} / ${video.height}`}
+      focal={video.poster.focal}
+      loading="lazy"
+    />
+    <p class="video-study__status"><span aria-hidden="true">▷</span> Inert study · {duration}</p>
+  </div>
+  <div class="video-study__body">
+    <div>
+      <p class="eyebrow">Provider-neutral video boundary</p>
+      <h3>{title}</h3>
+    </div>
+    <p>{presentation.notice} No player, stream, analytics, autoplay, third-party request, or real playback ID is present.</p>
+    <p class="video-study__credit">{video.credit.creditLine}</p>
+    <ul class="video-study__resources" aria-label="Video accessibility resources">
+      <li><a href={publicMediaUrl(captions.path)} download>{captions.label} (WebVTT)</a></li>
+      <li><a href={publicMediaUrl(transcript.path)}>{transcript.label}</a></li>
+    </ul>
+    <details>
+      <summary>Read the fixture transcript</summary>
+      <p>{transcript.text}</p>
+    </details>
+  </div>
+</div>

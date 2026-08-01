@@ -1,0 +1,117 @@
+---
+import { getImageRecord, getMediaPlacement } from '../data/media';
+import { buildResponsiveImageSources } from '../lib/media/image-provider';
+import type { FocalPoint } from '../lib/media/model';
+
+interface ArtDirectionSource {
+  mediaId: string;
+  placementId: string;
+  media: string;
+  sizes?: string;
+  focal?: FocalPoint;
+}
+
+interface Props {
+  mediaId: string;
+  placementId: string;
+  sizes: string;
+  loading?: 'eager' | 'lazy';
+  priority?: boolean;
+  fit?: 'cover' | 'contain';
+  aspectRatio?: string;
+  focal?: FocalPoint;
+  artDirection?: ArtDirectionSource;
+  showCaption?: boolean;
+  class?: string;
+}
+
+const {
+  mediaId,
+  placementId,
+  sizes,
+  loading = 'lazy',
+  priority = false,
+  fit = 'cover',
+  aspectRatio,
+  focal,
+  artDirection,
+  showCaption = true,
+  class: className,
+} = Astro.props;
+
+if (priority && loading !== 'eager') {
+  throw new Error(`Priority image ${mediaId} must use loading="eager"`);
+}
+
+const media = getImageRecord(mediaId);
+const placement = getMediaPlacement(placementId);
+if (placement.mediaId !== media.id) {
+  throw new Error(`Placement ${placement.id} does not reference ${media.id}`);
+}
+const sources = await buildResponsiveImageSources(media);
+const point = focal ?? media.focal;
+
+let directed;
+if (artDirection) {
+  const directedMedia = getImageRecord(artDirection.mediaId);
+  const directedPlacement = getMediaPlacement(artDirection.placementId);
+  if (directedPlacement.mediaId !== directedMedia.id) {
+    throw new Error(`Art-direction placement ${directedPlacement.id} does not reference ${directedMedia.id}`);
+  }
+  directed = {
+    mediaQuery: artDirection.media,
+    sizes: artDirection.sizes,
+    record: directedMedia,
+    placement: directedPlacement,
+    sources: await buildResponsiveImageSources(directedMedia),
+    focal: artDirection.focal ?? directedMedia.focal,
+  };
+}
+
+const alt = placement.decorative ? '' : placement.alt ?? '';
+const resolvedAspectRatio = aspectRatio ?? `${media.width} / ${media.height}`;
+const style = `--media-focal-x:${point.x * 100}%;--media-focal-y:${point.y * 100}%;--media-aspect:${resolvedAspectRatio};--media-fit:${fit};`;
+const fixture = media.rights.state === 'fixture-approved';
+---
+<figure class:list={['artwork-image', className]} data-media-id={media.id} data-placement-id={placement.id}>
+  <picture class="artwork-image__picture" style={style}>
+    {directed && (
+      <>
+        <source
+          media={directed.mediaQuery}
+          type="image/avif"
+          srcset={directed.sources.avifSrcset}
+          sizes={directed.sizes ?? sizes}
+          data-media-id={directed.record.id}
+          style={`object-position:${directed.focal.x * 100}% ${directed.focal.y * 100}%`}
+        />
+        <source
+          media={directed.mediaQuery}
+          type="image/webp"
+          srcset={directed.sources.webpSrcset}
+          sizes={directed.sizes ?? sizes}
+          data-media-id={directed.record.id}
+        />
+      </>
+    )}
+    <source type="image/avif" srcset={sources.avifSrcset} sizes={sizes} />
+    <img
+      src={sources.fallbackSrc}
+      srcset={sources.webpSrcset}
+      sizes={sizes}
+      width={media.width}
+      height={media.height}
+      alt={alt}
+      loading={loading}
+      decoding="async"
+      fetchpriority={priority ? 'high' : 'auto'}
+    />
+  </picture>
+  {showCaption && (
+    <figcaption>
+      {fixture && <strong>Preview fixture—not an artwork.</strong>}
+      <span>{media.defaultCaption}</span>
+      <small>{media.credit.creditLine}</small>
+    </figcaption>
+  )}
+</figure>
