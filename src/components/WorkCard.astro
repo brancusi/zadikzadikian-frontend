@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FixtureArtwork from './FixtureArtwork.astro';
+
+interface Props {
+  entry: CollectionEntry<'series'>;
+  index: number;
+}
+
+const { entry, index } = Astro.props;
+---
+<article class="work-card">
+  <a class="work-card__link" href={`/work/${entry.id}/`} aria-label={`View sample series treatment: ${entry.data.title}`}>
+    <FixtureArtwork
+      variant={entry.data.fixture}
+      description={`Abstract fixture ${index + 1} for layout review.`}
+      ratio={index % 3 === 1 ? 'portrait' : 'landscape'}
+      compact
+    />
+    <div class="work-card__text">
+      <p class="eyebrow">0{index + 1} · Sample series</p>
+      <h2>{entry.data.title}</h2>
+      <p>{entry.data.intro}</p>
+      <span class="text-link">View sample treatment <span aria-hidden="true">↗</span></span>
+    </div>
+  </a>
+</article>

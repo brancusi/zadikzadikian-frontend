@@ -1,0 +1,59 @@
+---
+import EditorialNote from '../components/EditorialNote.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const routes = [
+  {
+    title: 'Studio & general',
+    description: 'A future public channel for appropriate general correspondence.',
+  },
+  {
+    title: 'Press & image rights',
+    description: 'A distinct route for interviews, credits, reproduction, and permissions.',
+  },
+  {
+    title: 'Exhibition inquiries',
+    description: 'A verified professional contact route without an unsupported representation claim.',
+  },
+];
+---
+<BaseLayout
+  title="Contact — Preview treatment"
+  description="A contact-routing treatment for the noindex Zadik Zadikian website preview. No form, address, email, phone, or representation claim is published."
+>
+  <div class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Contact treatment · no active submission</p>
+        <h1>Contact</h1>
+      </div>
+      <p class="page-header__intro">Purpose-specific routing can protect privacy, reduce confusion, and keep professional relationships accurately described.</p>
+    </header>
+
+    <section class="content-section" aria-labelledby="contact-routes-heading">
+      <h2 id="contact-routes-heading" class="visually-hidden">Proposed contact routes</h2>
+      <div class="contact-grid">
+        {routes.map((route, index) => (
+          <article class="contact-card">
+            <div>
+              <p class="eyebrow">0{index + 1} · Proposed route</p>
+              <h2>{route.title}</h2>
+            </div>
+            <div>
+              <span class="contact-status">Channel awaiting approval</span>
+              <p>{route.description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="contact-boundary-heading">
+      <h2 id="contact-boundary-heading" class="visually-hidden">Contact preview boundary</h2>
+      <EditorialNote title="No contact collection">
+        <p>This static preview has no form processing and publishes no studio address, email address, phone number, dealer, or current representation.</p>
+        <p>Approved public channels, privacy language, recipient ownership, and retention operations are production launch decisions.</p>
+      </EditorialNote>
+    </section>
+  </div>
+</BaseLayout>

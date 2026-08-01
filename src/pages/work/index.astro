@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import EditorialNote from '../../components/EditorialNote.astro';
+import WorkCard from '../../components/WorkCard.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const series = (await getCollection('series')).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout
+  title="Work — Sample index"
+  description="A sample work index for the noindex Zadik Zadikian website design preview. No artist media is included."
+>
+  <div class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Preview collection · 03 sample treatments</p>
+        <h1>Work</h1>
+      </div>
+      <p class="page-header__intro">A mobile-first index that lets future series images carry the rhythm while keeping titles and editorial context visible.</p>
+    </header>
+
+    <section class="content-section" aria-labelledby="work-grid-heading">
+      <h2 id="work-grid-heading" class="visually-hidden">Sample series treatments</h2>
+      <ol class="work-grid">
+        {series.map((entry, index) => (
+          <li><WorkCard entry={entry} index={index} /></li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="content-section" aria-labelledby="archive-direction-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Future archive</p>
+        <h2 id="archive-direction-heading">Curated now. Extensible later.</h2>
+        <p>The public-site inventory identifies a much broader series archive. The preview intentionally proves only three templates; the final route set and publication rights remain editorial decisions.</p>
+      </div>
+      <EditorialNote title="Sample content">
+        <p>Series names are architecture examples. Original abstract graphics replace artist media, and every linked page is labeled as a sample.</p>
+      </EditorialNote>
+    </section>
+  </div>
+</BaseLayout>

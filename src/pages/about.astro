@@ -1,0 +1,46 @@
+---
+import EditorialNote from '../components/EditorialNote.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="About — Preview treatment"
+  description="A biography and artist-statement treatment for the noindex Zadik Zadikian website preview; disputed details are withheld."
+>
+  <div class="page-shell">
+    <header class="page-header">
+      <div>
+        <p class="eyebrow">Biography treatment · editorial placeholder</p>
+        <h1>About</h1>
+      </div>
+      <p class="page-header__intro">A calm, readable biography framework that distinguishes approved practice language from chronology still under review.</p>
+    </header>
+
+    <section class="content-section" aria-labelledby="biography-heading">
+      <h2 id="biography-heading" class="visually-hidden">Biography direction</h2>
+      <div class="about-grid">
+        <p class="about-grid__lead">The source material associates Zadikian's practice with gold, repeated form, architecture, scale, labor, and displacement.</p>
+        <div class="about-grid__body">
+          <p>This preview stops there deliberately. A production biography should be concise, factual, and linked to source-reviewed chronology—not reconstructed from conflicting public pages.</p>
+          <p>Birth details, early-life chronology, studio history, personal relationships, and current professional affiliations are withheld until authorized editorial review is complete.</p>
+        </div>
+      </div>
+      <ul class="theme-list" aria-label="Themes identified for editorial review">
+        <li>Material</li>
+        <li>Structure</li>
+        <li>Transformation</li>
+      </ul>
+    </section>
+
+    <section class="content-section" aria-labelledby="statement-treatment-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Artist voice</p>
+        <h2 id="statement-treatment-heading">Statement, with clear authorship.</h2>
+        <p>The final page can separate a dated first-person statement from third-person biography and external criticism. This preview does not reproduce unapproved source prose.</p>
+      </div>
+      <EditorialNote title="Editorial verification in progress">
+        <p>No birth year, private location, contact address, dealer claim, or unresolved project status appears in this treatment.</p>
+        <p>Final copy will require author approval, source attribution where applicable, and a recorded review date.</p>
+      </EditorialNote>
+    </section>
+  </div>
+</BaseLayout>
