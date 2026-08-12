@@ -23,7 +23,7 @@ const series = (await getCollection('series')).sort((a, b) => a.data.order - b.d
       <h2 id="work-grid-heading" class="visually-hidden">Sample series treatments</h2>
       <ol class="work-grid">
         {series.map((entry, index) => (
-          <li><WorkCard entry={entry} index={index} /></li>
+          <li><WorkCard entry={entry} index={index} context="work-index" /></li>
         ))}
       </ol>
     </section>

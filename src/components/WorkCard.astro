@@ -1,21 +1,32 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import FixtureArtwork from './FixtureArtwork.astro';
+import ArtworkImage from './ArtworkImage.astro';
 
 interface Props {
   entry: CollectionEntry<'series'>;
   index: number;
+  context: 'home' | 'work-index';
 }
 
-const { entry, index } = Astro.props;
+const { entry, index, context } = Astro.props;
+const mediaId = {
+  stack: 'img-fixture-stack-v1',
+  threshold: 'img-fixture-threshold-wide-v1',
+  field: 'img-fixture-field-v1',
+}[entry.data.fixture];
+const placementId = context === 'home'
+  ? `placement-home-card-${entry.id}`
+  : `placement-work-index-${entry.id}`;
 ---
 <article class="work-card">
   <a class="work-card__link" href={`/work/${entry.id}/`} aria-label={`View sample series treatment: ${entry.data.title}`}>
-    <FixtureArtwork
-      variant={entry.data.fixture}
-      description={`Abstract fixture ${index + 1} for layout review.`}
-      ratio={index % 3 === 1 ? 'portrait' : 'landscape'}
-      compact
+    <ArtworkImage
+      mediaId={mediaId}
+      placementId={placementId}
+      sizes="(max-width: 42rem) calc(100vw - 2rem), calc(50vw - 4rem)"
+      aspectRatio={index % 3 === 1 ? '4 / 5' : '4 / 3'}
+      loading="lazy"
+      class="artwork-image--card"
     />
     <div class="work-card__text">
       <p class="eyebrow">0{index + 1} · Sample series</p>

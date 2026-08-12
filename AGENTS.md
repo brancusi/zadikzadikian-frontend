@@ -5,6 +5,7 @@ This file is the project's committed home for project-intrinsic agent knowledge:
 - Run the complete local gate with `pnpm validate`; `package.json` is authoritative for pinned tool versions.
 - Preserve the public preview boundaries documented in `README.md` and enforced by `tests/preview-boundaries.test.ts` until a separately approved production phase.
 - Keep Astro output fully static. `astro.config.ts` deliberately omits the current Netlify adapter because it emits a runtime Function; Netlify configuration remains in `netlify.toml`.
+- Route all public image/video records through `src/lib/media/model.ts`; `scripts/validate-media.ts` is the build-time rights, accessibility, reference, and content-identity gate.
 
 ## Maintaining this file
 

@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import ArtworkImage from '../components/ArtworkImage.astro';
 import EditorialNote from '../components/EditorialNote.astro';
-import FixtureArtwork from '../components/FixtureArtwork.astro';
 import WorkCard from '../components/WorkCard.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -23,10 +23,20 @@ const series = (await getCollection('series')).sort((a, b) => a.data.order - b.d
         <p class="hero__index">Preview<br />01 / 01</p>
       </div>
     </div>
-    <FixtureArtwork
-      variant="threshold"
-      ratio="hero"
-      description="Original geometric study for the preview's first screen."
+    <ArtworkImage
+      mediaId="img-fixture-threshold-wide-v1"
+      placementId="placement-home-hero-wide"
+      sizes="(max-width: 56rem) 100vw, 54vw"
+      loading="eager"
+      priority
+      fit="cover"
+      class="artwork-image--hero"
+      artDirection={{
+        mediaId: 'img-fixture-threshold-portrait-v1',
+        placementId: 'placement-home-hero-mobile',
+        media: '(max-width: 42rem)',
+        sizes: '100vw',
+      }}
     />
   </section>
 
@@ -37,7 +47,7 @@ const series = (await getCollection('series')).sort((a, b) => a.data.order - b.d
     </div>
     <ol class="work-grid">
       {series.map((entry, index) => (
-        <li><WorkCard entry={entry} index={index} /></li>
+        <li><WorkCard entry={entry} index={index} context="home" /></li>
       ))}
     </ol>
   </section>
@@ -62,7 +72,7 @@ const series = (await getCollection('series')).sort((a, b) => a.data.order - b.d
     <h2 id="boundary-heading" class="visually-hidden">Preview content boundary</h2>
     <EditorialNote title="Review boundary">
       <p><strong>Everything visual is a purpose-made fixture.</strong> It is not artwork by Zadik Zadikian and does not stand in for a final crop, credit, or alt description.</p>
-      <p>Biographical dates, studio details, representation, project status, portrait rights, video, and route migration decisions remain outside this preview.</p>
+      <p>Biographical dates, studio details, representation, project status, portrait rights, real video, and route migration decisions remain outside this preview. The local video treatment is an inert design study only.</p>
     </EditorialNote>
   </section>
 </BaseLayout>
