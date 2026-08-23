@@ -30,3 +30,24 @@ jobs:
         run: pnpm install --frozen-lockfile
       - name: Type-check, build, and test
         run: pnpm validate
+
+  validate-cms:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Set up pinned CMS Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: cms/.nvmrc
+      - name: Enable pinned pnpm
+        run: corepack enable
+      - name: Install CMS dependencies
+        run: pnpm --dir cms install --frozen-lockfile
+      - name: Type-check and build CMS
+        run: pnpm --dir cms check
+      - name: Verify generated schema types
+        run: |
+          pnpm --dir cms types:generate
+          git diff --exit-code -- cms/types/generated

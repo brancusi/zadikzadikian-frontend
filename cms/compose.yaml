@@ -1,0 +1,21 @@
+name: zadikian-catalog-cms
+
+services:
+  postgres:
+    image: postgres:17.6-bookworm
+    environment:
+      POSTGRES_DB: zadikian_cms
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: cms_dev_only
+    ports:
+      - "127.0.0.1:5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U strapi -d zadikian_cms"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
