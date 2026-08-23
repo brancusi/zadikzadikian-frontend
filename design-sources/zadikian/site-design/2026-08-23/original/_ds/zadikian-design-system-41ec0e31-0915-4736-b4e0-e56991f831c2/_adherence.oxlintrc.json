@@ -1,0 +1,261 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/catalog/**",
+              "components/core/**",
+              "components/editorial/**",
+              "components/typographic/**",
+              "ui_kits/proposal/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Libre Caslon Display|Libre Caslon Text))/i]",
+        "message": "Font not provided by the design system. Available: Libre Caslon Display, Libre Caslon Text."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|variant|onClick|disabled|href|key|ref|className|style|children)$/]",
+        "message": "<Button> doesn't accept that prop. Declared props: children, variant, onClick, disabled, href."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Button'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:solid|outline|text)$/]",
+        "message": "<Button> variant must be one of 'solid' | 'outline' | 'text'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CVList'] > JSXAttribute > JSXIdentifier[name!=/^(?:heading|entries|key|ref|className|style|children)$/]",
+        "message": "<CVList> doesn't accept that prop. Declared props: heading, entries."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Folio'] > JSXAttribute > JSXIdentifier[name!=/^(?:left|center|right|key|ref|className|style|children)$/]",
+        "message": "<Folio> doesn't accept that prop. Declared props: left, center, right."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PressItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:quote|publication|author|year|key|ref|className|style|children)$/]",
+        "message": "<PressItem> doesn't accept that prop. Declared props: quote, publication, author, year."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PullQuote'] > JSXAttribute > JSXIdentifier[name!=/^(?:quote|attribution|source|key|ref|className|style|children)$/]",
+        "message": "<PullQuote> doesn't accept that prop. Declared props: quote, attribution, source."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|label|index|size|key|ref|className|style|children)$/]",
+        "message": "<SectionHeading> doesn't accept that prop. Declared props: title, label, index, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SectionHeading'] > JSXAttribute[name.name='size'] > Literal[value!=/^(?:colossal|display|headline)$/]",
+        "message": "<SectionHeading> size must be one of 'colossal' | 'display' | 'headline'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='SpecList'] > JSXAttribute > JSXIdentifier[name!=/^(?:items|key|ref|className|style|children)$/]",
+        "message": "<SpecList> doesn't accept that prop. Declared props: items."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tombstone'] > JSXAttribute > JSXIdentifier[name!=/^(?:title|year|medium|dimensions|edition|catalogNo|align|key|ref|className|style|children)$/]",
+        "message": "<Tombstone> doesn't accept that prop. Declared props: title, year, medium, dimensions, edition, catalogNo, align."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Tombstone'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center|right)$/]",
+        "message": "<Tombstone> align must be one of 'left' | 'center' | 'right'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='WorkFigure'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|title|year|medium|dimensions|edition|catalogNo|bleed|key|ref|className|style|children)$/]",
+        "message": "<WorkFigure> doesn't accept that prop. Declared props: src, alt, title, year, medium, dimensions, edition, catalogNo, bleed."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Button": {
+        "replaces": []
+      },
+      "CVList": {
+        "replaces": []
+      },
+      "Folio": {
+        "replaces": []
+      },
+      "PressItem": {
+        "replaces": []
+      },
+      "PullQuote": {
+        "replaces": []
+      },
+      "SectionHeading": {
+        "replaces": []
+      },
+      "SpecList": {
+        "replaces": []
+      },
+      "Tombstone": {
+        "replaces": []
+      },
+      "WorkFigure": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--font-grotesque",
+      "--font-serif-display",
+      "--font-serif-text",
+      "--gold",
+      "--gold-deep",
+      "--gold-leaf",
+      "--hairline",
+      "--hairline-dark",
+      "--ink",
+      "--ink-2",
+      "--ink-3",
+      "--leading-body",
+      "--leading-display",
+      "--leading-headline",
+      "--leading-meta",
+      "--link",
+      "--link-hover",
+      "--measure-body",
+      "--measure-lede",
+      "--page-margin",
+      "--paper",
+      "--paper-warm",
+      "--pigment-cadmium",
+      "--pigment-chrome",
+      "--pigment-magenta",
+      "--pigment-turquoise",
+      "--pigment-ultramarine",
+      "--radius-0",
+      "--rule",
+      "--rule-strong",
+      "--space-1",
+      "--space-10",
+      "--space-11",
+      "--space-12",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--surface-card",
+      "--surface-page",
+      "--surface-plinth",
+      "--text-body",
+      "--text-caption",
+      "--text-colossal",
+      "--text-display",
+      "--text-headline",
+      "--text-lede",
+      "--text-meta",
+      "--text-title",
+      "--tracking-caption",
+      "--tracking-display",
+      "--tracking-meta",
+      "--weight-bold",
+      "--weight-regular"
+    ],
+    "tokenKinds": {
+      "--paper": "color",
+      "--paper-warm": "color",
+      "--surface-card": "color",
+      "--ink": "color",
+      "--ink-2": "color",
+      "--ink-3": "color",
+      "--hairline": "color",
+      "--hairline-dark": "color",
+      "--gold": "color",
+      "--gold-deep": "color",
+      "--gold-leaf": "color",
+      "--pigment-cadmium": "color",
+      "--pigment-chrome": "color",
+      "--pigment-ultramarine": "color",
+      "--pigment-turquoise": "color",
+      "--pigment-magenta": "color",
+      "--surface-page": "color",
+      "--surface-plinth": "color",
+      "--text-display": "font",
+      "--text-body": "font",
+      "--text-meta": "font",
+      "--accent": "color",
+      "--rule": "color",
+      "--rule-strong": "color",
+      "--link": "color",
+      "--link-hover": "color",
+      "--font-serif-display": "font",
+      "--font-serif-text": "font",
+      "--font-grotesque": "font",
+      "--text-colossal": "font",
+      "--text-headline": "font",
+      "--text-title": "font",
+      "--text-lede": "font",
+      "--text-caption": "font",
+      "--leading-display": "font",
+      "--leading-headline": "font",
+      "--leading-body": "font",
+      "--leading-meta": "font",
+      "--tracking-display": "font",
+      "--tracking-meta": "font",
+      "--tracking-caption": "font",
+      "--weight-regular": "font",
+      "--weight-bold": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--space-10": "spacing",
+      "--space-11": "spacing",
+      "--space-12": "spacing",
+      "--page-margin": "spacing",
+      "--measure-body": "spacing",
+      "--measure-lede": "spacing",
+      "--radius-0": "radius"
+    },
+    "fontFamilies": [
+      "Libre Caslon Display",
+      "Libre Caslon Text"
+    ]
+  }
+}

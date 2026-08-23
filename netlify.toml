@@ -6,6 +6,32 @@
   NODE_VERSION = "24.18.0"
   PNPM_VERSION = "11.18.0"
 
+# Exact one-hop migrations only. Conditional/omitted legacy content is never sent to Home.
+[[redirects]]
+  from = "/bio"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/resume"
+  to = "/cv/"
+  status = 301
+
+[[redirects]]
+  from = "/path-to-nine-work"
+  to = "/work/path-to-nine/"
+  status = 301
+
+[[redirects]]
+  from = "/work/gold-stacks"
+  to = "/work/stacks/"
+  status = 301
+
+[[redirects]]
+  from = "/solis"
+  to = "/work/solis/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

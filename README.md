@@ -1,6 +1,6 @@
 # Zadik Zadikian website preview
 
-A static, noindex design preview for the proposed replacement artist website. It demonstrates an image-led visual direction and representative information architecture without migrating the current site's media or publishing unresolved launch content.
+A static, noindex implementation of the design team’s proposed replacement artist website. It delivers the supplied work-led composition and full preview route set without migrating uncleared media or publishing unresolved launch content.
 
 ## Preview boundaries
 
@@ -37,22 +37,24 @@ That verifies preserved design-source integrity and media records, performs Astr
 
 ## Design system
 
-The design system has three distinct layers:
+Visual work has four authoritative reference surfaces:
 
-1. [`design-sources/zadikian/original/`](./design-sources/zadikian/original/) is the complete, immutable private source/reference authorized by the captain/team for repository retention;
-2. [`docs/design-system.md`](./docs/design-system.md) is the reviewed, summarized production contract; and
-3. [`src/styles/tokens.css`](./src/styles/tokens.css) plus reusable [`src/components/`](./src/components/) are the production implementation.
+1. [`design-sources/zadikian/original/`](./design-sources/zadikian/original/) is the complete immutable design-system source;
+2. [`design-sources/zadikian/site-design/2026-08-23/original/`](./design-sources/zadikian/site-design/2026-08-23/original/) is the complete immutable site-design delivery;
+3. [`docs/design-system.md`](./docs/design-system.md) is the reviewed, summarized production contract; and
+4. [`src/styles/tokens.css`](./src/styles/tokens.css), reusable [`src/components/`](./src/components/), and [`src/pages/`](./src/pages/) are the Astro implementation.
 
-Future visual work must consult both the original source and summarized contract. Preserved proposal/runtime files are not executed or built. Archive artwork is reference-only and not cleared for public use; every public asset still passes the media/license gate. See the [preserved-source README and manifests](./design-sources/zadikian/README.md).
+Future visual work must consult all four. Preserved runtime/prototype files are never executed or built. Archive artwork is reference-only and not cleared for public use; every public asset still passes the media/license gate. See the [preserved-source README](./design-sources/zadikian/README.md) and [implementation record](./docs/site-design-implementation.md).
 
 ## Representative routes
 
-- `/` — first-screen design direction and selected sample series
-- `/work/` — sample work index
-- `/work/path-to-nine/`, `/work/stacks/`, `/work/solis/` — clearly labeled sample series pages
-- `/about/` — biography and statement treatment with disputed facts withheld
-- `/cv/` — structured CV treatment using non-factual model entries
-- `/contact/` — task-based contact treatment with no active channels or form
+- `/` — full-bleed opening, thesis, five-chapter path, evidence band, held current-work module, and statement handoff
+- `/work/` — five-chapter retrospective index plus complete published-preview index
+- `/work/path-to-nine/`, `/work/stacks/`, `/work/solis/` — reusable chapter/detail/gallery patterns, clearly labeled as samples
+- `/about/` — biography hub and chronology architecture with disputed facts and portrait rights withheld
+- `/artist-statement/` — statement/work-text composition with the unapproved first-person draft withheld
+- `/cv/` — structured web-first CV using non-factual model entries
+- `/contact/` — task routing and press-resource treatment with no active channels or form
 - `/404.html` — static not-found treatment
 
 ## Content and media model

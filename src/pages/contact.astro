@@ -1,50 +1,62 @@
 ---
 import EditorialNote from '../components/EditorialNote.astro';
+import SectionHeading from '../components/SectionHeading.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const routes = [
-  {
-    title: 'Studio & general',
-    description: 'A future public channel for appropriate general correspondence.',
-  },
-  {
-    title: 'Press & image rights',
-    description: 'A distinct route for interviews, credits, reproduction, and permissions.',
-  },
-  {
-    title: 'Exhibition inquiries',
-    description: 'A verified professional contact route without an unsupported representation claim.',
-  },
+  ['Studio & general', 'A future public channel for appropriate general correspondence.'],
+  ['Press & image rights', 'A distinct route for interviews, credits, reproduction, and permissions.'],
+  ['Exhibition inquiries', 'A verified professional pathway without an unsupported representation claim.'],
+];
+const resources = [
+  ['Biography structure', '/about/', 'Web preview'],
+  ['Artist-statement structure', '/artist-statement/', 'Web preview'],
+  ['Chronology and CV', '/cv/', 'Web preview'],
+  ['Image and record treatments', '/work/', 'Web preview'],
 ];
 ---
 <BaseLayout
-  title="Contact — Preview treatment"
-  description="A contact-routing treatment for the noindex Zadik Zadikian website preview. No form, address, email, phone, or representation claim is published."
+  title="Contact — Routing preview"
+  description="A contact and press-resource implementation for the noindex Zadik Zadikian preview. No form or private channel is published."
 >
   <div class="page-shell">
-    <header class="page-header">
-      <div>
-        <p class="eyebrow">Contact treatment · no active submission</p>
-        <h1>Contact</h1>
-      </div>
-      <p class="page-header__intro">Purpose-specific routing can protect privacy, reduce confusion, and keep professional relationships accurately described.</p>
+    <header class="contact-header">
+      <p class="eyebrow">Information · privacy before activation</p>
+      <h1>Contact</h1>
     </header>
 
     <section class="content-section" aria-labelledby="contact-routes-heading">
-      <h2 id="contact-routes-heading" class="visually-hidden">Proposed contact routes</h2>
-      <div class="contact-grid">
-        {routes.map((route, index) => (
-          <article class="contact-card">
+      <div class="section-rule-heading">
+        <p class="eyebrow">Inquiry routes · channels awaiting approval</p>
+        <h2 id="contact-routes-heading" class="visually-hidden">Proposed contact routes</h2>
+      </div>
+      <div class="contact-route-grid">
+        {routes.map(([title, description], index) => (
+          <article class="contact-route">
             <div>
               <p class="eyebrow">0{index + 1} · Proposed route</p>
-              <h2>{route.title}</h2>
+              <h3>{title}</h3>
             </div>
             <div>
-              <span class="contact-status">Channel awaiting approval</span>
-              <p>{route.description}</p>
+              <span class="contact-status">No active channel</span>
+              <p>{description}</p>
             </div>
           </article>
         ))}
+      </div>
+    </section>
+
+    <section class="content-section press-resources" aria-labelledby="press-heading">
+      <SectionHeading id="press-heading" label="Press resources" title="Prepared, not published" index="§">
+        <p>The supplied information-page hierarchy is retained, but files, private contacts, representation, and download claims remain withheld until their owners and rights are verified.</p>
+      </SectionHeading>
+      <div class="press-resources__grid">
+        <ul class="resource-list">
+          {resources.map(([title, href, status]) => (
+            <li><a href={href}><span>{title}</span><span class="eyebrow">{status}</span></a></li>
+          ))}
+        </ul>
+        <blockquote>“The site should feel like the beginning of serious scholarship, not a campaign for recognition.”<cite>Design-team editorial brief · private source reference</cite></blockquote>
       </div>
     </section>
 
@@ -52,7 +64,7 @@ const routes = [
       <h2 id="contact-boundary-heading" class="visually-hidden">Contact preview boundary</h2>
       <EditorialNote title="No contact collection">
         <p>This static preview has no form processing and publishes no studio address, email address, phone number, dealer, or current representation.</p>
-        <p>Approved public channels, privacy language, recipient ownership, and retention operations are production launch decisions.</p>
+        <p>Approved channels, recipient ownership, response expectation, privacy notice, retention, deletion, and one authorized sandbox delivery test are separate launch decisions.</p>
       </EditorialNote>
     </section>
   </div>

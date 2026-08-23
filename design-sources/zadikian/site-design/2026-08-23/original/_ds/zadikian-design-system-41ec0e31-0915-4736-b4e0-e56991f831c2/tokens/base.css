@@ -1,0 +1,6 @@
+/* Zadikian Design System — base element styles (kept minimal; tokens do the work) */
+body{background:var(--surface-page);color:var(--text-body);font-family:var(--font-serif-text);font-size:var(--text-body);line-height:var(--leading-body);margin:0;-webkit-font-smoothing:antialiased}
+h1,h2,h3{color:var(--text-display);font-family:var(--font-serif-display);font-weight:var(--weight-regular);letter-spacing:var(--tracking-display);line-height:var(--leading-display);margin:0}
+a{color:var(--link);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .18s ease}
+a:hover{color:var(--link-hover)}
+::selection{background:var(--gold);color:#fff}

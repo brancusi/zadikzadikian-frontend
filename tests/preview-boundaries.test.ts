@@ -21,7 +21,7 @@ function htmlFor(route: string): string {
   return readFileSync(path, 'utf8');
 }
 
-const routes = ['/', 'work', 'work/path-to-nine', 'work/stacks', 'work/solis', 'about', 'cv', 'contact', '404'];
+const routes = ['/', 'work', 'work/path-to-nine', 'work/stacks', 'work/solis', 'about', 'artist-statement', 'cv', 'contact', '404'];
 
 describe('generated preview boundaries', () => {
   it.each(routes)('renders %s as noindex semantic HTML', (route) => {
@@ -67,18 +67,24 @@ describe('generated preview boundaries', () => {
     const sample = htmlFor('work/path-to-nine');
 
     expect(home.match(/Preview fixture—not an artwork\./g)?.length).toBeGreaterThanOrEqual(4);
-    expect(sample).toContain('Sample series page');
-    expect(sample).toContain('Images and credits · rights approval required');
-    expect(sample).toContain('original abstract study');
+    expect(sample).toContain('Sample series · facts held for verification');
+    expect(sample).toContain('Owner master and public rights required');
+    expect(sample).toContain('original abstract fixture');
   });
 
-  it('ships closed robots and host-specific preview headers', () => {
+  it('ships closed robots, host-specific preview headers, and exact one-hop migrations', () => {
     expect(readFileSync(join(dist, 'robots.txt'), 'utf8')).toBe('User-agent: *\nDisallow: /\n');
 
     const netlify = readFileSync(join(root, 'netlify.toml'), 'utf8');
     expect(netlify).toContain('publish = "dist"');
     expect(netlify).toContain('X-Robots-Tag = "noindex, nofollow, noarchive"');
     expect(netlify).toContain("form-action 'none'");
+    expect(netlify).toContain('from = "/bio"\n  to = "/about/"');
+    expect(netlify).toContain('from = "/resume"\n  to = "/cv/"');
+    expect(netlify).toContain('from = "/path-to-nine-work"\n  to = "/work/path-to-nine/"');
+    expect(netlify).toContain('from = "/work/gold-stacks"\n  to = "/work/stacks/"');
+    expect(netlify).toContain('from = "/solis"\n  to = "/work/solis/"');
+    expect(netlify).not.toMatch(/to = "\/"\n\s+status = 301/);
 
     const caddy = readFileSync(join(root, 'Caddyfile'), 'utf8');
     expect(caddy).toContain('root * dist');

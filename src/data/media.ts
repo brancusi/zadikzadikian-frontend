@@ -182,6 +182,66 @@ const placements = [
     context: 'Home page first visual encounter below 42rem',
     alt: 'Abstract design study: a tall gold-edged doorway converges on a small illuminated square in a charcoal interior.',
   },
+  {
+    id: 'placement-home-chapter-ground',
+    mediaId: 'img-fixture-field-v1',
+    context: 'Home retrospective-path row: Ground',
+    alt: 'Project-created field study with a pale circle above an irregular charcoal horizon; not an artwork.',
+  },
+  {
+    id: 'placement-home-chapter-field',
+    mediaId: 'img-fixture-threshold-wide-v1',
+    context: 'Home retrospective-path row: Field',
+    alt: 'Project-created threshold study with converging planes and a square of light; not an artwork.',
+  },
+  {
+    id: 'placement-home-chapter-unit',
+    mediaId: 'img-fixture-stack-v1',
+    context: 'Home retrospective-path row: Unit',
+    alt: 'Project-created study of six repeated open units in a stepped arrangement; not an artwork.',
+  },
+  {
+    id: 'placement-home-chapter-body',
+    mediaId: 'img-fixture-threshold-wide-v1',
+    context: 'Home retrospective-path row: Body',
+    alt: 'Project-created threshold geometry reserving a rights-gated body chapter; not an artwork.',
+  },
+  {
+    id: 'placement-home-chapter-open',
+    mediaId: 'img-fixture-field-v1',
+    context: 'Home retrospective-path row: Open structure',
+    alt: 'Project-created light-and-field geometry reserving an open-structure chapter; not an artwork.',
+  },
+  {
+    id: 'placement-home-current',
+    mediaId: 'img-fixture-stack-v1',
+    context: 'Home current-work module held for publication review',
+    alt: 'Project-created repeated-unit study standing in for a held current-work placement; not an artwork.',
+  },
+  {
+    id: 'placement-work-chapter-ground',
+    mediaId: 'img-fixture-field-v1',
+    context: 'Work index reserved Ground chapter',
+    alt: 'Project-created field study marking a reserved, unpublished Ground chapter; not an artwork.',
+  },
+  {
+    id: 'placement-work-chapter-body',
+    mediaId: 'img-fixture-threshold-wide-v1',
+    context: 'Work index reserved Body chapter',
+    alt: 'Project-created threshold study marking a rights-gated Body chapter; not an artwork.',
+  },
+  {
+    id: 'placement-work-chapter-open',
+    mediaId: 'img-fixture-stack-v1',
+    context: 'Work index reserved Open structure chapter',
+    alt: 'Project-created repeated-unit study marking a held Open structure chapter; not an artwork.',
+  },
+  {
+    id: 'placement-about-portrait',
+    mediaId: 'img-fixture-threshold-portrait-v1',
+    context: 'About page reserved portrait placement',
+    alt: 'Abstract project-created threshold used to reserve portrait space while portrait rights remain pending.',
+  },
   ...(['path-to-nine', 'stacks', 'solis'] as const).flatMap((seriesId) => {
     const mediaId = {
       'path-to-nine': 'img-fixture-threshold-wide-v1',

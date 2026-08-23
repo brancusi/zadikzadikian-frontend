@@ -7,7 +7,7 @@ This file is the project's committed home for project-intrinsic agent knowledge:
 - Keep Astro output fully static. `astro.config.ts` deliberately omits the current Netlify adapter because it emits a runtime Function; Netlify configuration remains in `netlify.toml`.
 - Netlify remains the authoritative host; the separate noindex Railway preview and its guarded operations are owned by `docs/operations/railway-staging.md`.
 - Route all public image/video records through `src/lib/media/model.ts`; `scripts/validate-media.ts` is the build-time rights, accessibility, reference, and content-identity gate.
-- Visual work must consult both the immutable full reference in `design-sources/zadikian/original/` and the summarized contract in `docs/design-system.md`; `src/styles/tokens.css` remains the sole production token owner. Never execute or edit preserved source in place; `scripts/validate-design-sources.ts` guards its manifest.
+- Visual work must consult the immutable design system in `design-sources/zadikian/original/`, the latest complete site design in `design-sources/zadikian/site-design/2026-08-23/original/`, `docs/design-system.md`, and `docs/site-design-implementation.md`; `src/styles/tokens.css` remains the sole production token owner. Never execute or edit preserved source in place; `scripts/validate-design-sources.ts` guards both manifests.
 
 ## Maintaining this file
 

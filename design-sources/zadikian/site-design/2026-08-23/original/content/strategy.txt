@@ -1,0 +1,212 @@
+DESIGN-TEAM BRIEF
+[Title] The Open Structure
+[Subtitle] Website philosophy, sitemap, editorial system, and production guidance
+For information architecture, content, UX, visual design, and development
+Editorial working master for studio and design-team review
+[Heading1] 1. Strategic objective
+THE JOB OF THE SITE  Make the case for Zadikian as a historically consequential participant in postwar American sculpture by allowing the work, chronology, and archival evidence to accumulate. The site should feel like the beginning of serious scholarship, not a campaign for recognition.
+The current site contains a broad image archive and several valuable first-person texts, but its flat collection list does not explain the career. The redesign must create a retrospective path through the work while preserving a complete index for scholars, curators, and collectors. The governing story is the movement between figure and field: body, room, unit, serial structure, gravity-formed face, and open color system.
+The escape from Soviet Armenia should enter through biography, chronology, and a restrained interpretive passage. It must never function as a cinematic homepage device or a shortcut to significance. The public argument is that the work transforms conditions of rupture into a formal language of portable units, repeatable actions, and structures that can be remade.
+[Heading1] 2. Audiences and reading modes
+Audience
+They need
+The site should produce
+Curators and scholars
+Evidence, chronology, archival images, series development, sources
+A coherent career that warrants research and exhibition.
+Collectors and advisors
+Major works, scale, material, institutional trajectory, stewardship
+Confidence built through precision rather than sales language.
+Press and writers
+Short biography, statement, press images, captions, current projects
+Clear facts and usable language without inflated claims.
+General public
+Immediate visual sequence, concise texts, process, touch, color
+A legible encounter with an ambitious and humane practice.
+Studio and estate
+Maintainable inventory, rights, loans, exhibitions, bibliography
+A durable publishing system rather than a one-time redesign.
+[Heading1] 3. Recommended sitemap
+Section
+Page
+Purpose / content
+Home
+Editorial overview
+Name, current work, two-sentence thesis, five retrospective chapters, current institutional project, selected chronology, latest text.
+Work
+Selected Works
+A curated sequence of 25-40 works that establishes the entire arc before any series taxonomy.
+Work
+Ground / Figure
+Figures, portraits, studies, La Brea; the body as first measure.
+Work
+Field / Space
+112 Greene, gilded rooms, architectural interventions, Solis; sculpture as environmental condition.
+Work
+Unit / Structure
+Gold stacks, aluminum stacks, Path to Nine, Made in USA; brick, interval, seriality, portability.
+Work
+Body / Emergence
+Foreigners, shell casts, selected figures; gravity, action, casting, recognizable form.
+Work
+Open Structure
+Waves, pigment blocks, The Studio; color, touch, rearrangement, participation.
+Work
+Objects / Use
+Functional work, objects, palm, plateau, Love on the Beat; publish after studio inventory.
+Work
+All Works / Series Index
+Alphabetical and chronological access to every legacy collection and object record.
+Artist
+Biography
+Concise biography plus expandable long chronology; restrained account of migration and return.
+Artist
+Statements
+Artist statement, work statement, and selected historical texts.
+Artist
+Chronology / CV
+Verified life and exhibition chronology; downloadable PDF.
+Exhibitions
+Current and selected
+Venice 2026 first; selected institutional history; separate archive for full list.
+Texts
+Essays / interviews / press
+Commissioned criticism, primary interviews, and selected press organized by type.
+Studio
+Process / films
+Casting, gilding, gravity-forming, stacking, handling, and installation.
+Information
+News / contact / press resources
+Announcements, professional contact, press kit, image-rights procedure.
+[Heading1] 4. Homepage narrative
+Order
+Module
+Editorial job
+1
+Opening image
+A major work with spatial presence. Do not default to a portrait, escape imagery, or a gold montage.
+2
+Thesis
+Two sentences: body and system; repetition as difference; open structure as the career's through-line.
+3
+Five chapters
+Ground, Field, Unit, Body, Open Structure. Each chapter gets one full image, a 35-60 word text, and a direct work link.
+4
+Historical anchor
+A restrained archival band: 112 Greene Street, MoMA PS1, the Serra collaboration, and The New Portrait.
+5
+Current work
+The Studio at Venice, presented as a continuation of casting, blocks, touch, and change.
+6
+Institutional sequence
+Brooklyn, Cafesjian, Independent, Venice. Use dates and roles; do not imply acquisition.
+7
+Latest text
+Canvas interview or a commissioned critical essay.
+8
+Footer
+Contact, press resources, rights, social link, newsletter if actively maintained.
+[Heading1] 5. Work navigation: curated path plus complete index
+Do not reproduce the current seventeen-item grid as the primary experience. It treats major historical bodies and undeveloped image folders as equivalent. The primary Work page should be a curated retrospective sequence organized by the five chapters. A secondary All Works / Series Index should preserve every collection name, legacy URL, and object record.
+INFORMATION-ARCHITECTURE RULE  Chronology explains evolution; themes explain continuity. The new site needs both. Use the chapter structure for the main narrative and chronological filters inside the complete index.
+Every legacy collection URL should redirect to its new destination so existing links and search history are preserved.
+A work can belong to more than one chapter. Foreigners can appear under Body / Emergence and in process filters; Waves can bridge Unit / Structure and Open Structure.
+Do not publish all Studies at equal scale. Build edited sequences of 12-20 images with a path to the deeper archive.
+Separate artworks from process photographs, installation views, studio documentation, and ephemera.
+[Heading1] 6. Page templates
+Template
+Required components
+Work detail
+Title; date; medium; dimensions; edition; hero image; views/details; 80-160 word text; exhibition history; bibliography; credits; related works.
+Series / chapter
+Short thesis; year range; defining operations; selected works; process material; chronology markers; related chapters.
+Exhibition
+Venue; dates; role; curator; checklist; installation views; commissioned text; press; credits; acquisition status if confirmed.
+Essay / interview
+Author; date; publication; reading time; full text or excerpt by permission; works discussed; citations.
+Chronology
+Year; place; event; type; verification source; related works; archive links.
+Press resource
+Approved bios; statements; CV; image selects; captions; copyright; download terms; contact.
+[Heading1] 7. Collection and object metadata
+Field group
+Fields
+Identity
+Preferred title; alternate title; year or year range; series; unique/edition status; signature/inscriptions.
+Object
+Exact medium; support; surface; casting method; component count; dimensions; weight; installation footprint.
+History
+Provenance; exhibitions; literature; commissions; collections; related archival documents.
+Images
+View type; photographer; date; location; copyright; reproduction permission; alt text; crop restrictions.
+Editorial
+Short description; long text; process notes; chapter tags; related works; evidence status.
+Operations
+Packing; handling; mounting; installation; conservation; contact for loans and rights. Keep nonpublic fields private.
+[Heading1] 8. Visual direction
+Use an austere editorial system: warm white, black, calibrated gray, and one muted oxide accent. Let gold and color come from the artworks, not from decorative interface effects.
+Pair one contemporary grotesk sans serif with one restrained reading serif at most. Typography should feel archival and current, not luxury-branded.
+Favor generous margins, full-width installation views, and disciplined caption placement. Scale should be felt through bodies, doorways, rooms, and details.
+Use motion only to support duration and sequence: slow fades, measured image changes, and optional process video. No glitter, parallax spectacle, simulated gold, floating particles, or cinematic escape reenactment.
+Show chronology through visual recurrence: room to block, block to stack, stack to body, body to movable color. Avoid a single uninterrupted wall of gold images.
+Design captions as primary scholarship, not footnotes. They must remain legible on mobile and visible without hovering.
+[Heading1] 9. Editorial tone
+TONE  Assured, exact, material, and historically literate. The writing should make a strong case without announcing that it is making one.
+Principle
+Use
+Avoid
+Lead with operations
+Casting, covering, throwing, repeating, stacking, touching, rearranging
+Generic claims about transcendence or innovation
+Let evidence carry stature
+Dates, venues, archives, collaborator testimony, installation facts
+Legendary, seminal, iconic, genius, groundbreaking
+Treat biography obliquely
+Rupture, portable form, reconstruction, return
+Heroic escape narrative repeated across pages
+Use art history strategically
+One precise comparison in an essay when it clarifies a method
+Name-dropping in homepage or work captions
+Keep market language private
+Professional collection and loan information
+Prices, investment language, scarcity rhetoric on the public site
+[Heading1] 10. Canon-positioning protocol
+The site should present Zadikian as a participant in the historical field before describing him as an omission from it. The public proof sequence is: early New York venue; total-space work; MoMA PS1 record; documented Serra collaboration; return of the figure; long development of serial gold structures; renewed institutional sequence; open color work in Venice. This establishes continuity and consequence.
+Homepage: one restrained line about his place inside the experimental field of Minimalism and post-Minimalism.
+Biography: dates, places, training, migration, key exhibitions, and collaborators; no extended theoretical comparison.
+Work statement: the precise Minimalism/post-Minimalism argument.
+Chronology: documentary evidence and links.
+Commissioned essays: deeper comparisons to Cezanne, Newman, Rothko, Rauschenberg, Johns, Warhol, Christo, and other relevant figures.
+PREFERRED PUBLIC CLAIM  Zadikian developed within the experimental New York field of Minimalism and post-Minimalism, then extended its serial and spatial vocabularies through gold, gravity, the human figure, and participatory structure.
+[Heading1] 11. Content production plan
+Lock the facts. Resolve birth year, migration chronology, early gold dates, Path to Nine count, and the complete exhibition record.
+Inventory the archive. Assign a stable record to every artwork, installation view, process image, document, and text.
+Edit the retrospective sequence. Select the 25-40 works that make the five-chapter argument before designing screens.
+Commission missing photography. Prioritize early figurative works, room-scale pieces, stack variations, gravity-forming process, and the newest color works.
+Clear rights. Record photographers, permissions, captions, and crop restrictions before image design begins.
+Prototype the narrative. Test desktop and mobile versions of Home, Work chapter, Work detail, and Chronology before extending the system.
+Run a curatorial QA. Check every canonical claim, venue role, date, collection reference, and acquisition implication.
+Launch with redirects and an editorial calendar. Preserve all old URLs and plan regular updates around Venice, essays, loans, and new work.
+[Heading1] 12. Launch content checklist
+Approved long and short artist statements
+Approved work statement and two-sentence homepage thesis
+Verified short and long biography
+Verified chronology and current CV
+Five chapter introductions
+25-40 selected work records with complete metadata
+Complete series index with legacy URL map
+Current exhibition pages for Venice and recent institutional projects
+At least one archival essay and one recent interview
+Press kit, rights procedure, contact, and image credits
+Accessibility review: alt text, keyboard use, contrast, captions, reduced-motion option
+Institutional collection claims confirmed in writing
+[Heading1] 13. Research basis
+FIRST PARTY  Zadik Zadikian - current website - Existing navigation, collection titles, and project texts.
+ARCHIVE  White Columns - 112 Greene Street - Early total-space work.
+INSTITUTION  MoMA - Zadik Zadikian - MoMA PS1 exhibition record.
+INTERVIEW  Richard Serra with Phong Bui - Documented collaboration and technical experiment.
+MUSEUM  Brooklyn Museum - Solid Gold - Recent institutional context.
+FAIR  Independent 20th Century - 2025 - Canon-reframing context and Made in USA.
+INSTITUTION  Cafesjian Center - RETURN - Official exhibition dates.
+INSTITUTION  La Biennale di Venezia - Armenia - Current color, process, and open-studio language.
+INTERVIEW  Canvas - Zadik Zadikian - First-person account central to the new narrative.

@@ -1,0 +1,1080 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "site-design-2026-08-23-73c2292a0985",
+  "provenance": {
+    "shareName": "03",
+    "authorizedSourceUrl": "https://www.dropbox.com/scl/fo/dkvepbrm23mijf3wae4ez/AAeFih0D7qVoqUtCyYNV45k?rlkey=lrmjr1dpr4m5gw9g1askrta9f&dl=0",
+    "downloadRequestUrl": "https://www.dropbox.com/scl/fo/dkvepbrm23mijf3wae4ez/AAeFih0D7qVoqUtCyYNV45k?rlkey=lrmjr1dpr4m5gw9g1askrta9f&dl=1",
+    "effectiveDownloadUrl": "https://ucc0e1f7013d38ce9055e9f4e687.dl.dropboxusercontent.com/zip_download_get/CqIf2q-OtiYIuxb5GmFcNd38YFyy5SnUFVa1x9OFJxvcg6xwRgr1YUic3DIj6Gv-OiBfvqI4AY4yJHY9wXrXw0HuYITYPjqAgnhwb_CTPjXp5Q",
+    "suppliedBy": "captain-provided design team Dropbox folder",
+    "repositoryRetentionAuthorized": true,
+    "downloadResponse": {
+      "filename": "03.zip",
+      "contentType": "application/zip",
+      "bytes": 2523923,
+      "sha256": "3485cc2adf48d5b29954595075077a6c01facfe9a592f8e88f198bab40e9be1e"
+    },
+    "payloadArchive": {
+      "filename": "Artist website redesign mockup.zip",
+      "bytes": 2523627,
+      "sha256": "73c2292a098504be98caa5f1f74da75b1ba03ccbad22a99b229b07b504c3f821",
+      "entryCount": 36,
+      "expandedBytes": 2756592,
+      "expansionRatio": 1.092
+    }
+  },
+  "safetyReview": {
+    "crcValid": true,
+    "genericWrapperExtractionRefused": true,
+    "wrapperFinding": "The Dropbox wrapper contains an absolute root directory entry named / and marks its nested ZIP executable; only the exact nested regular ZIP entry was streamed to a fixed temporary filename.",
+    "wrapperEntries": [
+      {
+        "path": "/",
+        "directory": true,
+        "expandedBytes": 0,
+        "compressedBytes": 0,
+        "crc32": "00000000",
+        "unixMode": "000744"
+      },
+      {
+        "path": "Artist website redesign mockup.zip",
+        "directory": false,
+        "expandedBytes": 2523627,
+        "compressedBytes": 2523627,
+        "crc32": "8528b3e6",
+        "unixMode": "000744"
+      }
+    ],
+    "payload": {
+      "encryptedEntries": 0,
+      "absolutePaths": 0,
+      "parentTraversalPaths": 0,
+      "backslashPaths": 0,
+      "duplicateOrCaseCollidingPaths": 0,
+      "symlinks": 0,
+      "specialFiles": 0,
+      "executableEntries": 0,
+      "osMetadataEntries": 0,
+      "dependencyCacheEntries": 0,
+      "credentialMatches": 0,
+      "activeFiles": [
+        "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_bundle.js",
+        "image-slot.js",
+        "support.js"
+      ],
+      "activeFileReview": "Retained as inert reference. The prototype runtime uses new Function, local fetches, postMessage, and remote React/Babel/font URLs; it is excluded from production and must not be executed from the preserved path.",
+      "prototypeDocuments": [
+        "Artist.dc.html",
+        "Home.dc.html",
+        "Information.dc.html",
+        "Statements.dc.html",
+        "Unit-Structure.dc.html",
+        "Work.dc.html"
+      ],
+      "remoteResourceReferences": [
+        "https://fonts.googleapis.com (font stylesheet reference)",
+        "https://unpkg.com/react (prototype runtime)",
+        "https://unpkg.com/react-dom (prototype runtime)",
+        "https://unpkg.com/@babel/standalone (prototype runtime)"
+      ]
+    },
+    "nestedArchiveReview": {
+      "containers": [
+        {
+          "path": "uploads/docs-1787475832056-5k4v.docx",
+          "bytes": 50592,
+          "sha256": "ec18d3f418a2069cdef6bbad48371390bb17f7adbda377f5e51fb5772894cfe0",
+          "entryCount": 23,
+          "expandedBytes": 979137,
+          "expansionRatio": 19.354,
+          "externalHyperlinkRelationships": 9,
+          "macroOrEmbeddedObjectEntries": [],
+          "entries": [
+            {
+              "path": "[Content_Types].xml",
+              "directory": false,
+              "expandedBytes": 2506,
+              "compressedBytes": 444,
+              "crc32": "7a7172ce"
+            },
+            {
+              "path": "_rels/.rels",
+              "directory": false,
+              "expandedBytes": 734,
+              "compressedBytes": 248,
+              "crc32": "404b2679"
+            },
+            {
+              "path": "docProps/core.xml",
+              "directory": false,
+              "expandedBytes": 930,
+              "compressedBytes": 480,
+              "crc32": "2ab72288"
+            },
+            {
+              "path": "docProps/app.xml",
+              "directory": false,
+              "expandedBytes": 1132,
+              "compressedBytes": 491,
+              "crc32": "17dbdbf4"
+            },
+            {
+              "path": "word/document.xml",
+              "directory": false,
+              "expandedBytes": 139920,
+              "compressedBytes": 10024,
+              "crc32": "3b20c8c6"
+            },
+            {
+              "path": "word/_rels/document.xml.rels",
+              "directory": false,
+              "expandedBytes": 3769,
+              "compressedBytes": 666,
+              "crc32": "8a27598f"
+            },
+            {
+              "path": "word/styles.xml",
+              "directory": false,
+              "expandedBytes": 349802,
+              "compressedBytes": 12272,
+              "crc32": "a88ac120"
+            },
+            {
+              "path": "word/stylesWithEffects.xml",
+              "directory": false,
+              "expandedBytes": 438131,
+              "compressedBytes": 13625,
+              "crc32": "d3827960"
+            },
+            {
+              "path": "word/settings.xml",
+              "directory": false,
+              "expandedBytes": 2535,
+              "compressedBytes": 959,
+              "crc32": "5f463fa3"
+            },
+            {
+              "path": "word/webSettings.xml",
+              "directory": false,
+              "expandedBytes": 438,
+              "compressedBytes": 256,
+              "crc32": "53e55ae8"
+            },
+            {
+              "path": "word/fontTable.xml",
+              "directory": false,
+              "expandedBytes": 2811,
+              "compressedBytes": 611,
+              "crc32": "73a039fb"
+            },
+            {
+              "path": "word/theme/theme1.xml",
+              "directory": false,
+              "expandedBytes": 10939,
+              "compressedBytes": 1734,
+              "crc32": "b8224194"
+            },
+            {
+              "path": "customXml/item1.xml",
+              "directory": false,
+              "expandedBytes": 262,
+              "compressedBytes": 167,
+              "crc32": "d73a809e"
+            },
+            {
+              "path": "customXml/_rels/item1.xml.rels",
+              "directory": false,
+              "expandedBytes": 295,
+              "compressedBytes": 189,
+              "crc32": "d5e5ca3e"
+            },
+            {
+              "path": "customXml/itemProps1.xml",
+              "directory": false,
+              "expandedBytes": 354,
+              "compressedBytes": 225,
+              "crc32": "4d4cbbb5"
+            },
+            {
+              "path": "word/numbering.xml",
+              "directory": false,
+              "expandedBytes": 6244,
+              "compressedBytes": 945,
+              "crc32": "017c7da9"
+            },
+            {
+              "path": "word/header1.xml",
+              "directory": false,
+              "expandedBytes": 1510,
+              "compressedBytes": 492,
+              "crc32": "4b8a2b63"
+            },
+            {
+              "path": "word/header2.xml",
+              "directory": false,
+              "expandedBytes": 1510,
+              "compressedBytes": 492,
+              "crc32": "4b8a2b63"
+            },
+            {
+              "path": "word/header3.xml",
+              "directory": false,
+              "expandedBytes": 1510,
+              "compressedBytes": 492,
+              "crc32": "4b8a2b63"
+            },
+            {
+              "path": "word/footer1.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer2.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer3.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "docProps/thumbnail.jpeg",
+              "directory": false,
+              "expandedBytes": 8324,
+              "compressedBytes": 1469,
+              "crc32": "67d6c8a2"
+            }
+          ]
+        },
+        {
+          "path": "uploads/docs-1787475874857-ckbu.docx",
+          "bytes": 42588,
+          "sha256": "9f38f39fbed5dae8e894684639e2191a4c74e874f1e88a680fc5eb1e973880cf",
+          "entryCount": 23,
+          "expandedBytes": 845864,
+          "expansionRatio": 19.862,
+          "externalHyperlinkRelationships": 0,
+          "macroOrEmbeddedObjectEntries": [],
+          "entries": [
+            {
+              "path": "[Content_Types].xml",
+              "directory": false,
+              "expandedBytes": 2506,
+              "compressedBytes": 444,
+              "crc32": "7a7172ce"
+            },
+            {
+              "path": "_rels/.rels",
+              "directory": false,
+              "expandedBytes": 734,
+              "compressedBytes": 248,
+              "crc32": "404b2679"
+            },
+            {
+              "path": "docProps/core.xml",
+              "directory": false,
+              "expandedBytes": 919,
+              "compressedBytes": 465,
+              "crc32": "b9605184"
+            },
+            {
+              "path": "docProps/app.xml",
+              "directory": false,
+              "expandedBytes": 1132,
+              "compressedBytes": 491,
+              "crc32": "17dbdbf4"
+            },
+            {
+              "path": "word/document.xml",
+              "directory": false,
+              "expandedBytes": 8427,
+              "compressedBytes": 2345,
+              "crc32": "58d6e37f"
+            },
+            {
+              "path": "word/_rels/document.xml.rels",
+              "directory": false,
+              "expandedBytes": 2000,
+              "compressedBytes": 359,
+              "crc32": "d2baea45"
+            },
+            {
+              "path": "word/styles.xml",
+              "directory": false,
+              "expandedBytes": 349802,
+              "compressedBytes": 12272,
+              "crc32": "a88ac120"
+            },
+            {
+              "path": "word/stylesWithEffects.xml",
+              "directory": false,
+              "expandedBytes": 438131,
+              "compressedBytes": 13625,
+              "crc32": "d3827960"
+            },
+            {
+              "path": "word/settings.xml",
+              "directory": false,
+              "expandedBytes": 2535,
+              "compressedBytes": 959,
+              "crc32": "5f463fa3"
+            },
+            {
+              "path": "word/webSettings.xml",
+              "directory": false,
+              "expandedBytes": 438,
+              "compressedBytes": 256,
+              "crc32": "53e55ae8"
+            },
+            {
+              "path": "word/fontTable.xml",
+              "directory": false,
+              "expandedBytes": 2811,
+              "compressedBytes": 611,
+              "crc32": "73a039fb"
+            },
+            {
+              "path": "word/theme/theme1.xml",
+              "directory": false,
+              "expandedBytes": 10939,
+              "compressedBytes": 1734,
+              "crc32": "b8224194"
+            },
+            {
+              "path": "customXml/item1.xml",
+              "directory": false,
+              "expandedBytes": 262,
+              "compressedBytes": 167,
+              "crc32": "d73a809e"
+            },
+            {
+              "path": "customXml/_rels/item1.xml.rels",
+              "directory": false,
+              "expandedBytes": 295,
+              "compressedBytes": 189,
+              "crc32": "d5e5ca3e"
+            },
+            {
+              "path": "customXml/itemProps1.xml",
+              "directory": false,
+              "expandedBytes": 354,
+              "compressedBytes": 225,
+              "crc32": "4d4cbbb5"
+            },
+            {
+              "path": "word/numbering.xml",
+              "directory": false,
+              "expandedBytes": 6244,
+              "compressedBytes": 945,
+              "crc32": "017c7da9"
+            },
+            {
+              "path": "word/header1.xml",
+              "directory": false,
+              "expandedBytes": 1510,
+              "compressedBytes": 491,
+              "crc32": "67ef63ac"
+            },
+            {
+              "path": "word/header2.xml",
+              "directory": false,
+              "expandedBytes": 1510,
+              "compressedBytes": 491,
+              "crc32": "67ef63ac"
+            },
+            {
+              "path": "word/header3.xml",
+              "directory": false,
+              "expandedBytes": 1510,
+              "compressedBytes": 491,
+              "crc32": "67ef63ac"
+            },
+            {
+              "path": "word/footer1.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer2.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer3.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "docProps/thumbnail.jpeg",
+              "directory": false,
+              "expandedBytes": 8324,
+              "compressedBytes": 1469,
+              "crc32": "67d6c8a2"
+            }
+          ]
+        },
+        {
+          "path": "uploads/docs-1787475874859-d6v6.docx",
+          "bytes": 44542,
+          "sha256": "2b66f2b738e2d99b9cd8db1670a6853db9a183d8ece5b59d8f32d80619a728c4",
+          "entryCount": 23,
+          "expandedBytes": 854550,
+          "expansionRatio": 19.185,
+          "externalHyperlinkRelationships": 6,
+          "macroOrEmbeddedObjectEntries": [],
+          "entries": [
+            {
+              "path": "[Content_Types].xml",
+              "directory": false,
+              "expandedBytes": 2506,
+              "compressedBytes": 444,
+              "crc32": "7a7172ce"
+            },
+            {
+              "path": "_rels/.rels",
+              "directory": false,
+              "expandedBytes": 734,
+              "compressedBytes": 248,
+              "crc32": "404b2679"
+            },
+            {
+              "path": "docProps/core.xml",
+              "directory": false,
+              "expandedBytes": 910,
+              "compressedBytes": 463,
+              "crc32": "790dcae3"
+            },
+            {
+              "path": "docProps/app.xml",
+              "directory": false,
+              "expandedBytes": 1132,
+              "compressedBytes": 491,
+              "crc32": "17dbdbf4"
+            },
+            {
+              "path": "word/document.xml",
+              "directory": false,
+              "expandedBytes": 15986,
+              "compressedBytes": 4096,
+              "crc32": "f8f16d8e"
+            },
+            {
+              "path": "word/_rels/document.xml.rels",
+              "directory": false,
+              "expandedBytes": 3142,
+              "compressedBytes": 564,
+              "crc32": "cd50c1b7"
+            },
+            {
+              "path": "word/styles.xml",
+              "directory": false,
+              "expandedBytes": 349802,
+              "compressedBytes": 12272,
+              "crc32": "a88ac120"
+            },
+            {
+              "path": "word/stylesWithEffects.xml",
+              "directory": false,
+              "expandedBytes": 438131,
+              "compressedBytes": 13625,
+              "crc32": "d3827960"
+            },
+            {
+              "path": "word/settings.xml",
+              "directory": false,
+              "expandedBytes": 2535,
+              "compressedBytes": 959,
+              "crc32": "5f463fa3"
+            },
+            {
+              "path": "word/webSettings.xml",
+              "directory": false,
+              "expandedBytes": 438,
+              "compressedBytes": 256,
+              "crc32": "53e55ae8"
+            },
+            {
+              "path": "word/fontTable.xml",
+              "directory": false,
+              "expandedBytes": 2811,
+              "compressedBytes": 611,
+              "crc32": "73a039fb"
+            },
+            {
+              "path": "word/theme/theme1.xml",
+              "directory": false,
+              "expandedBytes": 10939,
+              "compressedBytes": 1734,
+              "crc32": "b8224194"
+            },
+            {
+              "path": "customXml/item1.xml",
+              "directory": false,
+              "expandedBytes": 262,
+              "compressedBytes": 167,
+              "crc32": "d73a809e"
+            },
+            {
+              "path": "customXml/_rels/item1.xml.rels",
+              "directory": false,
+              "expandedBytes": 295,
+              "compressedBytes": 189,
+              "crc32": "d5e5ca3e"
+            },
+            {
+              "path": "customXml/itemProps1.xml",
+              "directory": false,
+              "expandedBytes": 354,
+              "compressedBytes": 225,
+              "crc32": "4d4cbbb5"
+            },
+            {
+              "path": "word/numbering.xml",
+              "directory": false,
+              "expandedBytes": 6244,
+              "compressedBytes": 945,
+              "crc32": "017c7da9"
+            },
+            {
+              "path": "word/header1.xml",
+              "directory": false,
+              "expandedBytes": 1508,
+              "compressedBytes": 491,
+              "crc32": "80f2295a"
+            },
+            {
+              "path": "word/header2.xml",
+              "directory": false,
+              "expandedBytes": 1508,
+              "compressedBytes": 491,
+              "crc32": "80f2295a"
+            },
+            {
+              "path": "word/header3.xml",
+              "directory": false,
+              "expandedBytes": 1508,
+              "compressedBytes": 491,
+              "crc32": "80f2295a"
+            },
+            {
+              "path": "word/footer1.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer2.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer3.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "docProps/thumbnail.jpeg",
+              "directory": false,
+              "expandedBytes": 8324,
+              "compressedBytes": 1469,
+              "crc32": "67d6c8a2"
+            }
+          ]
+        },
+        {
+          "path": "uploads/docs-1787475874861-viia.docx",
+          "bytes": 53501,
+          "sha256": "81979faf73b76438b3856fd685021508be81f426073f93e07280ffe737fabfb7",
+          "entryCount": 23,
+          "expandedBytes": 1020789,
+          "expansionRatio": 19.08,
+          "externalHyperlinkRelationships": 18,
+          "macroOrEmbeddedObjectEntries": [],
+          "entries": [
+            {
+              "path": "[Content_Types].xml",
+              "directory": false,
+              "expandedBytes": 2506,
+              "compressedBytes": 444,
+              "crc32": "7a7172ce"
+            },
+            {
+              "path": "_rels/.rels",
+              "directory": false,
+              "expandedBytes": 734,
+              "compressedBytes": 248,
+              "crc32": "404b2679"
+            },
+            {
+              "path": "docProps/core.xml",
+              "directory": false,
+              "expandedBytes": 944,
+              "compressedBytes": 478,
+              "crc32": "38df818b"
+            },
+            {
+              "path": "docProps/app.xml",
+              "directory": false,
+              "expandedBytes": 1132,
+              "compressedBytes": 491,
+              "crc32": "17dbdbf4"
+            },
+            {
+              "path": "word/document.xml",
+              "directory": false,
+              "expandedBytes": 179628,
+              "compressedBytes": 12557,
+              "crc32": "9e8eecb6"
+            },
+            {
+              "path": "word/_rels/document.xml.rels",
+              "directory": false,
+              "expandedBytes": 5681,
+              "compressedBytes": 1026,
+              "crc32": "d30e6ae6"
+            },
+            {
+              "path": "word/styles.xml",
+              "directory": false,
+              "expandedBytes": 349802,
+              "compressedBytes": 12272,
+              "crc32": "a88ac120"
+            },
+            {
+              "path": "word/stylesWithEffects.xml",
+              "directory": false,
+              "expandedBytes": 438131,
+              "compressedBytes": 13625,
+              "crc32": "d3827960"
+            },
+            {
+              "path": "word/settings.xml",
+              "directory": false,
+              "expandedBytes": 2535,
+              "compressedBytes": 959,
+              "crc32": "5f463fa3"
+            },
+            {
+              "path": "word/webSettings.xml",
+              "directory": false,
+              "expandedBytes": 438,
+              "compressedBytes": 256,
+              "crc32": "53e55ae8"
+            },
+            {
+              "path": "word/fontTable.xml",
+              "directory": false,
+              "expandedBytes": 2811,
+              "compressedBytes": 611,
+              "crc32": "73a039fb"
+            },
+            {
+              "path": "word/theme/theme1.xml",
+              "directory": false,
+              "expandedBytes": 10939,
+              "compressedBytes": 1734,
+              "crc32": "b8224194"
+            },
+            {
+              "path": "customXml/item1.xml",
+              "directory": false,
+              "expandedBytes": 262,
+              "compressedBytes": 167,
+              "crc32": "d73a809e"
+            },
+            {
+              "path": "customXml/_rels/item1.xml.rels",
+              "directory": false,
+              "expandedBytes": 295,
+              "compressedBytes": 189,
+              "crc32": "d5e5ca3e"
+            },
+            {
+              "path": "customXml/itemProps1.xml",
+              "directory": false,
+              "expandedBytes": 354,
+              "compressedBytes": 225,
+              "crc32": "4d4cbbb5"
+            },
+            {
+              "path": "word/numbering.xml",
+              "directory": false,
+              "expandedBytes": 6244,
+              "compressedBytes": 945,
+              "crc32": "017c7da9"
+            },
+            {
+              "path": "word/header1.xml",
+              "directory": false,
+              "expandedBytes": 1516,
+              "compressedBytes": 498,
+              "crc32": "884d21b2"
+            },
+            {
+              "path": "word/header2.xml",
+              "directory": false,
+              "expandedBytes": 1516,
+              "compressedBytes": 498,
+              "crc32": "884d21b2"
+            },
+            {
+              "path": "word/header3.xml",
+              "directory": false,
+              "expandedBytes": 1516,
+              "compressedBytes": 498,
+              "crc32": "884d21b2"
+            },
+            {
+              "path": "word/footer1.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer2.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "word/footer3.xml",
+              "directory": false,
+              "expandedBytes": 1827,
+              "compressedBytes": 557,
+              "crc32": "0a0e4d39"
+            },
+            {
+              "path": "docProps/thumbnail.jpeg",
+              "directory": false,
+              "expandedBytes": 8324,
+              "compressedBytes": 1469,
+              "crc32": "67d6c8a2"
+            }
+          ]
+        }
+      ],
+      "totalContainers": 4,
+      "totalEntries": 92,
+      "totalExpandedBytes": 3700340,
+      "unsafeFindings": 0,
+      "notes": "All four ZIP-based DOCX files passed CRC/path/type/collision review. No macros, embedded objects, symlinks, special files, or further nested archives were present; external relationships are ordinary research hyperlinks only."
+    }
+  },
+  "retention": {
+    "root": "original",
+    "fileCount": 36,
+    "totalBytes": 2756592,
+    "modePolicy": "Payload archive entries supplied no usable Unix modes; retained regular files are normalized to Git mode 100644.",
+    "sourceBoundary": "Private, immutable design reference only; no preserved file is imported into the Astro build.",
+    "files": [
+      {
+        "path": ".thumbnail",
+        "bytes": 10256,
+        "mode": "100644",
+        "sha256": "afa9c2d8e0f2dafc092ce89b84b77a4ce20d777c644973d34ac8bb36e1c2c75c",
+        "archiveCrc32": "edd45ac3",
+        "archiveCompressedBytes": 10013
+      },
+      {
+        "path": "Artist.dc.html",
+        "bytes": 9358,
+        "mode": "100644",
+        "sha256": "92c2ed8ef98b7be76c87412f6f055362c6ac4474ba5dc8852c6d61dc58842a4e",
+        "archiveCrc32": "b67da7f3",
+        "archiveCompressedBytes": 3050
+      },
+      {
+        "path": "Home.dc.html",
+        "bytes": 21940,
+        "mode": "100644",
+        "sha256": "f6b79608778e8fc9f12d66c91fff4c06a76d74a7a86ce39c292ec2a0538b1df5",
+        "archiveCrc32": "d982fbcd",
+        "archiveCompressedBytes": 4607
+      },
+      {
+        "path": "Information.dc.html",
+        "bytes": 8760,
+        "mode": "100644",
+        "sha256": "7b8fda68a57b7327bb6642166e062af484e23be99169af06a261ff9b9419744d",
+        "archiveCrc32": "0869d1f2",
+        "archiveCompressedBytes": 2107
+      },
+      {
+        "path": "Statements.dc.html",
+        "bytes": 10586,
+        "mode": "100644",
+        "sha256": "93d838733aae341054be81ac903a1f055ca056622ab8aae71ea6b10e7c62a6bc",
+        "archiveCrc32": "6a875ce3",
+        "archiveCompressedBytes": 3315
+      },
+      {
+        "path": "Unit-Structure.dc.html",
+        "bytes": 11757,
+        "mode": "100644",
+        "sha256": "f7bb970c4fb717ec06fd276017644d8ba31100fba5b2c0c4024fab77e1df63bd",
+        "archiveCrc32": "6f651956",
+        "archiveCompressedBytes": 3236
+      },
+      {
+        "path": "Work.dc.html",
+        "bytes": 17688,
+        "mode": "100644",
+        "sha256": "71bbef31d015cde0817a568028e9eedf2541e2b1d65fbf927e4b11891c8bf5f4",
+        "archiveCrc32": "3b6015cc",
+        "archiveCompressedBytes": 3923
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_adherence.oxlintrc.json",
+        "bytes": 8637,
+        "mode": "100644",
+        "sha256": "94ffb9f492cb2e3886b7b1f5d2c36691b47b0f0303659efc63ea6b048fc04b56",
+        "archiveCrc32": "d5f07c6d",
+        "archiveCompressedBytes": 1815
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_bundle.js",
+        "bytes": 27401,
+        "mode": "100644",
+        "sha256": "337b95eac64ba4d958662efee60d016f12b1a9a8474d1e099bea69b8ef2d5228",
+        "archiveCrc32": "4f92f600",
+        "archiveCompressedBytes": 5803
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_manifest.json",
+        "bytes": 11294,
+        "mode": "100644",
+        "sha256": "90f340e2a05e3245f0b1c56bc08603dd17d4e3b4095fc7f609cf83499be93eaa",
+        "archiveCrc32": "c9fa7684",
+        "archiveCompressedBytes": 2497
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/readme.md",
+        "bytes": 7436,
+        "mode": "100644",
+        "sha256": "37bb6d7f2a0efea15ed283735242daed1dd412372206a51a02987e8dae3449f6",
+        "archiveCrc32": "fc33f666",
+        "archiveCompressedBytes": 3852
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/styles.css",
+        "bytes": 172,
+        "mode": "100644",
+        "sha256": "b77daa6d55b29b181e7ea064b84a6f2085afb852ec39cf959a135787ff043ad3",
+        "archiveCrc32": "c6ceb5d5",
+        "archiveCompressedBytes": 76
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/base.css",
+        "bytes": 687,
+        "mode": "100644",
+        "sha256": "7271fc1a8944d5ed531a2231dee4abdbcd734a87100a06fb8ed2f38c2db07f1b",
+        "archiveCrc32": "3a6999f3",
+        "archiveCompressedBytes": 350
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/colors.css",
+        "bytes": 872,
+        "mode": "100644",
+        "sha256": "70d4c765d363520862daf81de719dabf23b765d38d0d1606c9b2664bc7a6abcc",
+        "archiveCrc32": "eb07721e",
+        "archiveCompressedBytes": 487
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/fonts.css",
+        "bytes": 221,
+        "mode": "100644",
+        "sha256": "6267a604a4a67b7e342cc12e174654bf8d05bb2be0da67f4905c36a03edc4eaf",
+        "archiveCrc32": "e45c8573",
+        "archiveCompressedBytes": 190
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/spacing.css",
+        "bytes": 450,
+        "mode": "100644",
+        "sha256": "479f06a0d7992808e87e91ecc8859ca1858d0c4736135891a872f5c50cccedf6",
+        "archiveCrc32": "a759e019",
+        "archiveCompressedBytes": 265
+      },
+      {
+        "path": "_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/typography.css",
+        "bytes": 807,
+        "mode": "100644",
+        "sha256": "e4f2d61d2a571dc0f60a17f5efb10b3177cb9d798390faa95fe1cd79cfc42e43",
+        "archiveCrc32": "f720f673",
+        "archiveCompressedBytes": 432
+      },
+      {
+        "path": "assets/web/A-001.jpg",
+        "bytes": 222309,
+        "mode": "100644",
+        "sha256": "e66306264af5038b3bcb77f2d98a5813d65f3868c37a5d9171250a5879020b96",
+        "archiveCrc32": "cdc1e5bc",
+        "archiveCompressedBytes": 222309
+      },
+      {
+        "path": "assets/web/A-009.jpg",
+        "bytes": 329965,
+        "mode": "100644",
+        "sha256": "8db02fddd68664eb8e31faa3e2e0fe4c9e19a0425bb27da4c30929e587aa8d55",
+        "archiveCrc32": "75780753",
+        "archiveCompressedBytes": 329965
+      },
+      {
+        "path": "assets/web/A-011.jpg",
+        "bytes": 284323,
+        "mode": "100644",
+        "sha256": "cb8bd1d979c6d53b4c7be11a4aa199d49aa10c10ffe33a697031780350b9b8fc",
+        "archiveCrc32": "08331e3d",
+        "archiveCompressedBytes": 284323
+      },
+      {
+        "path": "assets/web/A-015.jpg",
+        "bytes": 278799,
+        "mode": "100644",
+        "sha256": "c5f7cb96aa6f06cddf3ded28c59adc08402243e9c52d50904c482a87d8a85bc8",
+        "archiveCrc32": "f2319d4c",
+        "archiveCompressedBytes": 278799
+      },
+      {
+        "path": "assets/web/A-017.jpg",
+        "bytes": 243481,
+        "mode": "100644",
+        "sha256": "45579e7973ab0a0090bb755995a2c7334894ad43be24adb3650ccc6460a27ef3",
+        "archiveCrc32": "6d9ab57b",
+        "archiveCompressedBytes": 243481
+      },
+      {
+        "path": "assets/web/A-020.jpg",
+        "bytes": 117964,
+        "mode": "100644",
+        "sha256": "738f3c613ccc0a207a01045fd3647ddcffd8be4999beb1c1c5f2c0a87636b418",
+        "archiveCrc32": "a37f611b",
+        "archiveCompressedBytes": 117964
+      },
+      {
+        "path": "assets/web/A-023.jpg",
+        "bytes": 198971,
+        "mode": "100644",
+        "sha256": "828cf3495856cee58c726a8cc47a63cc1da0095c23cbe0ee4555beb053264b36",
+        "archiveCrc32": "f6b53f88",
+        "archiveCompressedBytes": 198971
+      },
+      {
+        "path": "assets/web/A-026.jpg",
+        "bytes": 317727,
+        "mode": "100644",
+        "sha256": "ae5280e52c168ca5e9befe14bb37cc38a1a0139fd77560d956297d8e31c707ad",
+        "archiveCrc32": "eec32160",
+        "archiveCompressedBytes": 317727
+      },
+      {
+        "path": "assets/web/A-028.jpg",
+        "bytes": 247690,
+        "mode": "100644",
+        "sha256": "4eb2048a4ea0775d19f875fed2605f1fa942596ab32d74351afb3f6e294f9154",
+        "archiveCrc32": "5206c9be",
+        "archiveCompressedBytes": 247690
+      },
+      {
+        "path": "content/retrospective.txt",
+        "bytes": 18678,
+        "mode": "100644",
+        "sha256": "43bdb7581e77f1bdbb9f1e6df958c6013cd935a16eff35ebf902c481a16d9288",
+        "archiveCrc32": "ac2e5966",
+        "archiveCompressedBytes": 7482
+      },
+      {
+        "path": "content/statement.txt",
+        "bytes": 2863,
+        "mode": "100644",
+        "sha256": "3d74bc689d1eb4342c3c27d9a6f4f96cb9455df79ae71a6e0d6b59eb42b4975b",
+        "archiveCrc32": "87a22884",
+        "archiveCompressedBytes": 1350
+      },
+      {
+        "path": "content/strategy.txt",
+        "bytes": 13147,
+        "mode": "100644",
+        "sha256": "dd7bd8f00a87dc876450a4d725824154508c939dd53d1a1473d848b66cb9ec7f",
+        "archiveCrc32": "b2cf4099",
+        "archiveCompressedBytes": 5579
+      },
+      {
+        "path": "content/workstatement.txt",
+        "bytes": 6630,
+        "mode": "100644",
+        "sha256": "63fd70bd0efd19e997ee7e30b2b64aa514ec28e94c45008827366edc3c77fe32",
+        "archiveCrc32": "7f4cc01c",
+        "archiveCompressedBytes": 2969
+      },
+      {
+        "path": "image-slot.js",
+        "bytes": 65350,
+        "mode": "100644",
+        "sha256": "fff26d081c8d9d60870f86c7539a5d179b9cdab15e67f2b205508a068e7c7ff6",
+        "archiveCrc32": "22d39223",
+        "archiveCompressedBytes": 21690
+      },
+      {
+        "path": "support.js",
+        "bytes": 69150,
+        "mode": "100644",
+        "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe",
+        "archiveCrc32": "181800d2",
+        "archiveCompressedBytes": 19281
+      },
+      {
+        "path": "uploads/docs-1787475832056-5k4v.docx",
+        "bytes": 50592,
+        "mode": "100644",
+        "sha256": "ec18d3f418a2069cdef6bbad48371390bb17f7adbda377f5e51fb5772894cfe0",
+        "archiveCrc32": "becd72f6",
+        "archiveCompressedBytes": 45623
+      },
+      {
+        "path": "uploads/docs-1787475874857-ckbu.docx",
+        "bytes": 42588,
+        "mode": "100644",
+        "sha256": "9f38f39fbed5dae8e894684639e2191a4c74e874f1e88a680fc5eb1e973880cf",
+        "archiveCrc32": "4b726726",
+        "archiveCompressedBytes": 37633
+      },
+      {
+        "path": "uploads/docs-1787475874859-d6v6.docx",
+        "bytes": 44542,
+        "mode": "100644",
+        "sha256": "2b66f2b738e2d99b9cd8db1670a6853db9a183d8ece5b59d8f32d80619a728c4",
+        "archiveCrc32": "2da75e9b",
+        "archiveCompressedBytes": 39592
+      },
+      {
+        "path": "uploads/docs-1787475874861-viia.docx",
+        "bytes": 53501,
+        "mode": "100644",
+        "sha256": "81979faf73b76438b3856fd685021508be81f426073f93e07280ffe737fabfb7",
+        "archiveCrc32": "d7390b76",
+        "archiveCompressedBytes": 48509
+      }
+    ]
+  }
+}

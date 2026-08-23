@@ -1,0 +1,35 @@
+---
+import ArtworkImage from './ArtworkImage.astro';
+
+interface Props {
+  number: string;
+  label: string;
+  title: string;
+  description: string;
+  href: string;
+  linkLabel: string;
+  mediaId: string;
+  placementId: string;
+}
+
+const { number, label, title, description, href, linkLabel, mediaId, placementId } = Astro.props;
+---
+<article class="chapter-row">
+  <div class="chapter-row__heading">
+    <p class="eyebrow">{number} · {label}</p>
+    <h3>{title}</h3>
+  </div>
+  <ArtworkImage
+    mediaId={mediaId}
+    placementId={placementId}
+    sizes="(max-width: 42rem) calc(100vw - 4rem), (max-width: 56rem) 42vw, 34vw"
+    loading="lazy"
+    aspectRatio="4 / 3"
+    fit="cover"
+    class="artwork-image--chapter"
+  />
+  <div class="chapter-row__body">
+    <p>{description}</p>
+    <a class="text-link" href={href}>{linkLabel} <span aria-hidden="true">→</span></a>
+  </div>
+</article>

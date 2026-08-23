@@ -1,42 +1,104 @@
 ---
 import { getCollection } from 'astro:content';
+import ArtworkImage from '../../components/ArtworkImage.astro';
 import EditorialNote from '../../components/EditorialNote.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
 import WorkCard from '../../components/WorkCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const series = (await getCollection('series')).sort((a, b) => a.data.order - b.data.order);
+const getEntry = (id: string) => {
+  const entry = series.find((item) => item.id === id);
+  if (!entry) throw new Error(`Missing sample series: ${id}`);
+  return entry;
+};
+const chapters = [
+  { id: 'ground', number: 'I', label: 'Ground', title: 'The body as first measure', intro: 'A rights-gated chapter structure for early work, figures, portraits, and studies. No person or artwork record is implied by the fixture.', mediaId: 'img-fixture-field-v1', placementId: 'placement-work-chapter-ground' },
+  { id: 'field', number: 'II', label: 'Field', title: 'The room becomes sculpture', intro: 'A sample route tests atmospheric and spatial reading while exact historical records remain outside the preview.', entries: [getEntry('solis')] },
+  { id: 'unit', number: 'III', label: 'Unit', title: 'Brick, interval, and serial order', intro: 'Two approved sample routes demonstrate the chapter-to-series and object-detail hierarchy without publishing unresolved facts.', entries: [getEntry('path-to-nine'), getEntry('stacks')] },
+  { id: 'body', number: 'IV', label: 'Body', title: 'Figuration under pressure', intro: 'This reserved lane will require heightened depiction, subject, photographer, and contextual review before real records appear.', mediaId: 'img-fixture-threshold-wide-v1', placementId: 'placement-work-chapter-body' },
+  { id: 'open-structure', number: 'V', label: 'Open structure', title: 'Color, touch, participation', intro: 'The design supports current work in formation, but project status, interpretation, venue, and media remain held at their existing gates.', mediaId: 'img-fixture-stack-v1', placementId: 'placement-work-chapter-open' },
+];
 ---
 <BaseLayout
-  title="Work — Sample index"
-  description="A sample work index for the noindex Zadik Zadikian website design preview. No artist media is included."
+  title="Work — Retrospective preview"
+  description="A five-chapter work index implementing the supplied Zadik Zadikian site design with approved sample routes and project-created fixtures only."
 >
   <div class="page-shell">
-    <header class="page-header">
+    <header class="work-intro">
       <div>
-        <p class="eyebrow">Preview collection · 03 sample treatments</p>
+        <p class="eyebrow">Retrospective path · complete index follows</p>
         <h1>Work</h1>
       </div>
-      <p class="page-header__intro">A mobile-first index that lets future series images carry the rhythm while keeping titles and editorial context visible.</p>
+      <p>A chapter-led sequence explains the intended editorial evolution while a compact index preserves direct access to every approved sample route.</p>
+      <nav class="chapter-jump" aria-label="Work chapters">
+        <ol>
+          {chapters.map((chapter) => <li><a href={`#${chapter.id}`}>{chapter.number} {chapter.label}</a></li>)}
+          <li><a href="#index">Index</a></li>
+        </ol>
+      </nav>
     </header>
-
-    <section class="content-section" aria-labelledby="work-grid-heading">
-      <h2 id="work-grid-heading" class="visually-hidden">Sample series treatments</h2>
-      <ol class="work-grid">
-        {series.map((entry, index) => (
-          <li><WorkCard entry={entry} index={index} context="work-index" /></li>
-        ))}
-      </ol>
-    </section>
-
-    <section class="content-section" aria-labelledby="archive-direction-heading">
-      <div class="section-heading">
-        <p class="eyebrow">Future archive</p>
-        <h2 id="archive-direction-heading">Curated now. Extensible later.</h2>
-        <p>The public-site inventory identifies a much broader series archive. The preview intentionally proves only three templates; the final route set and publication rights remain editorial decisions.</p>
-      </div>
-      <EditorialNote title="Sample content">
-        <p>Series names are architecture examples. Original abstract graphics replace artist media, and every linked page is labeled as a sample.</p>
-      </EditorialNote>
-    </section>
   </div>
+
+  {chapters.map((chapter) => (
+    <section id={chapter.id} class="page-shell content-section work-chapter" aria-labelledby={`${chapter.id}-heading`}>
+      <SectionHeading
+        id={`${chapter.id}-heading`}
+        label={`Chapter ${chapter.number} · proposed editorial lens`}
+        title={chapter.title}
+        index={chapter.label}
+      >
+        <p>{chapter.intro}</p>
+      </SectionHeading>
+
+      {chapter.entries ? (
+        <ol class:list={['work-grid', chapter.entries.length === 1 && 'work-grid--single']}>
+          {chapter.entries.map((entry, index) => (
+            <li><WorkCard entry={entry} index={index} context="work-index" /></li>
+          ))}
+        </ol>
+      ) : (
+        <div class="reserved-work">
+          <ArtworkImage
+            mediaId={chapter.mediaId}
+            placementId={chapter.placementId}
+            sizes="(max-width: 56rem) calc(100vw - 4rem), 62vw"
+            loading="lazy"
+            fit="cover"
+          />
+          <div class="reserved-work__body">
+            <p class="eyebrow">Reserved record area</p>
+            <h3>Structure implemented. Publication withheld.</h3>
+            <p>Real work records will appear here only after owner-supplied media, exact metadata, public-web rights, credit, and placement-level accessibility review pass the repository gate.</p>
+          </div>
+        </div>
+      )}
+    </section>
+  ))}
+
+  <section id="index" class="page-shell content-section work-index" aria-labelledby="index-heading">
+    <SectionHeading
+      id="index-heading"
+      label="All published preview records"
+      title="Index"
+      index={`0${series.length}`}
+    >
+      <p>Only routes already present in the approved noindex preview are listed. Omitted legacy collections retain explicit unresolved dispositions rather than redirecting to Home.</p>
+    </SectionHeading>
+    <ol class="series-index">
+      {series.map((entry) => (
+        <li>
+          <a href={`/work/${entry.id}/`}>
+            <span>{entry.data.title}</span>
+            <span class="eyebrow">Sample series</span>
+            <span>{entry.data.recordLabel}</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+    <EditorialNote title="Route boundary">
+      <p>The complete legacy route inventory remains documented as migration evidence. Redirects are added only for exact, implemented equivalents; conditional or rights-gated pages are not redirected to unrelated destinations.</p>
+    </EditorialNote>
+  </section>
 </BaseLayout>
