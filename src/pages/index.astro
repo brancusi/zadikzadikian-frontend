@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import ArtworkImage from '../components/ArtworkImage.astro';
 import EditorialNote from '../components/EditorialNote.astro';
+import SectionHeading from '../components/SectionHeading.astro';
 import WorkCard from '../components/WorkCard.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -41,10 +42,12 @@ const series = (await getCollection('series')).sort((a, b) => a.data.order - b.d
   </section>
 
   <section class="page-shell content-section" aria-labelledby="selected-work-heading">
-    <div class="section-heading">
-      <p class="eyebrow">Selected directions</p>
-      <h2 id="selected-work-heading">Work, with room to breathe.</h2>
-    </div>
+    <SectionHeading
+      id="selected-work-heading"
+      label="Selected directions"
+      title="Work, with room to breathe."
+      index="01"
+    />
     <ol class="work-grid">
       {series.map((entry, index) => (
         <li><WorkCard entry={entry} index={index} context="home" /></li>

@@ -1,0 +1,103 @@
+/*
+ * Zadikian website design tokens.
+ * This is the sole owner of visual primitive and semantic custom properties.
+ * See docs/design-system.md before adding or changing a token.
+ */
+@layer tokens {
+  :root {
+    color-scheme: only light;
+
+    /* Gallery neutrals */
+    --paper: #fbfaf6;
+    --paper-warm: #f4f1e9;
+    --surface-card: #ffffff;
+    --ink: #161512;
+    --ink-2: #494640;
+    --ink-3: #8b857a;
+    --ink-meta-accessible: #625e56;
+    --hairline: #e4e0d6;
+    --hairline-dark: #161512;
+
+    /* Signature material and restrained pigment index marks */
+    --gold: #a8842c;
+    --gold-deep: #7e611c;
+    --pigment-cadmium: #e63329;
+    --pigment-chrome: #f2c400;
+    --pigment-ultramarine: #1f5fb4;
+    --pigment-turquoise: #35aeb2;
+    --pigment-magenta: #e23a77;
+
+    /* Semantic color roles */
+    --surface-page: var(--paper);
+    --surface-plinth: var(--paper-warm);
+    --surface-inverse: var(--ink);
+    --text-display-color: var(--ink);
+    --text-body-color: var(--ink-2);
+    --text-meta-color: var(--ink-meta-accessible);
+    --text-inverse-color: var(--paper);
+    --accent-rule: var(--gold);
+    --accent-interactive: var(--gold-deep);
+    --rule: var(--hairline);
+    --rule-strong: var(--hairline-dark);
+    --focus-ring: var(--gold-deep);
+
+    /* Type families: local/system fallback only until licensed files are supplied. */
+    --font-serif-display:
+      "Libre Caslon Display", "Big Caslon", "Times New Roman", Georgia, serif;
+    --font-serif-text: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+    --font-grotesque:
+      "Helvetica Neue", "Nimbus Sans L", Helvetica, Arial, sans-serif;
+
+    /* Type scale */
+    --font-size-colossal: clamp(4.5rem, 9vw, 8rem);
+    --font-size-display: clamp(3.5rem, 7vw, 4rem);
+    --font-size-headline: clamp(2.25rem, 5vw, 2.5rem);
+    --font-size-title: 1.75rem;
+    --font-size-lede: 1.3125rem;
+    --font-size-body: 1.0625rem;
+    --font-size-meta: 0.8125rem;
+    --font-size-caption: 0.6875rem;
+    --leading-display: 1.02;
+    --leading-headline: 1.12;
+    --leading-body: 1.62;
+    --leading-meta: 1.5;
+    --tracking-display: -0.015em;
+    --tracking-meta: 0.14em;
+    --tracking-caption: 0.08em;
+    --weight-regular: 400;
+    --weight-bold: 700;
+
+    /* Four-pixel spacing progression */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4rem;
+    --space-9: 6rem;
+    --space-10: 8rem;
+    --space-11: 11rem;
+    --space-12: 15rem;
+
+    /* Page geometry */
+    --page-margin: clamp(2rem, 7vw, 7.5rem);
+    --measure-body: 62ch;
+    --measure-lede: 38ch;
+    --rule-width: 1px;
+    --rule-width-strong: 2px;
+    --radius-none: 0;
+    --shadow-none: none;
+
+    /* Motion: color and opacity only. */
+    --duration-color: 180ms;
+    --duration-page: 240ms;
+    --easing-standard: ease;
+    --pressed-opacity: 0.7;
+
+    /* Documentation/guard values; CSS media queries repeat these literals. */
+    --breakpoint-narrow: 42rem;
+    --breakpoint-wide: 56rem;
+  }
+}

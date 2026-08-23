@@ -1,0 +1,19 @@
+---
+interface Props {
+  id: string;
+  label: string;
+  title: string;
+  index?: string;
+}
+
+const { id, label, title, index } = Astro.props;
+const hasIntro = Astro.slots.has('default');
+---
+<header class:list={['section-heading', hasIntro && 'section-heading--with-intro']}>
+  <div class="section-heading__meta">
+    <p class="eyebrow">{label}</p>
+    {index && <p class="section-heading__index" aria-hidden="true">{index}</p>}
+  </div>
+  <h2 id={id}>{title}</h2>
+  {hasIntro && <div class="section-heading__intro"><slot /></div>}
+</header>
