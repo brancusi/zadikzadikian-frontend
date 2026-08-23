@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.git
+.gitignore
+node_modules
+build
+dist
+.cache
+.tmp
+.strapi
+.strapi-*
+exports
+public/uploads/*
+!public/uploads/.gitkeep
+*.log
+*.sql

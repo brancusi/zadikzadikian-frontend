@@ -4,7 +4,7 @@ A static, noindex implementation of the design team’s proposed replacement art
 
 ## Preview boundaries
 
-- **Not a production launch or migration approval.** The custom domain, DNS, registrar, Cloudflare, current Squarespace site, forms, analytics, CMS, Mux, and paid services are untouched.
+- **Not a production launch or migration approval.** The custom domain, DNS, registrar, Cloudflare, current Squarespace site, forms, analytics, Mux, and production services are untouched. The isolated nonproduction CMS foundation is not connected to this preview.
 - Every visual is an original geometric interface fixture labeled **not an artwork by Zadik Zadikian**.
 - Biographical conflicts, private contact details, current representation, project status, portrait rights, staging video, and redirect dispositions remain withheld.
 - All routes include `noindex, nofollow, noarchive`; `robots.txt` disallows crawling and Netlify supplies a matching `X-Robots-Tag` header.
@@ -17,7 +17,7 @@ See [CONTENT-LICENSE.md](./CONTENT-LICENSE.md) for the content/media boundary.
 - Native Astro responsive image generation (AVIF/WebP width candidates) with Netlify `dist` publishing and immutable fingerprinted assets
 - Node `24.18.0` and pnpm `11.18.0`, pinned in repository files and lockfile
 - Strict media/rights/accessibility validation, Vitest boundary tests, and static HTML validation
-- No client JavaScript, server runtime, database, form processing, analytics, CMS, active video player, or third-party media
+- No client JavaScript, server runtime, database, form processing, analytics, CMS dependency, active video player, or third-party media in the static site
 
 ## Local development
 
@@ -34,6 +34,17 @@ pnpm validate
 ```
 
 That verifies preserved design-source integrity and media records, performs Astro type checking and a production build, runs focused preview-boundary/design-system tests, and validates the static HTML.
+
+## Isolated nonproduction CMS
+
+[`cms/`](./cms/) contains a separately installed, version-pinned Strapi Community 5 TypeScript application backed by PostgreSQL. It is a catalog foundation only: there are no catalog schemas, real media, production content, public-site integration, or build hooks. Its package graph and commands remain isolated from the static site's root install and `pnpm validate`.
+
+See the [CMS workspace guide](./cms/README.md) and [nonproduction operations runbook](./docs/operations/cms-nonproduction.md). Validate it independently with:
+
+```bash
+pnpm --dir cms install --frozen-lockfile
+pnpm --dir cms check
+```
 
 ## Design system
 

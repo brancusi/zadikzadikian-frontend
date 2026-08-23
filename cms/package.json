@@ -1,0 +1,45 @@
+{
+  "name": "@zadikian/catalog-cms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nonproduction Strapi Community foundation for the Zadik Zadikian catalog",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "strapi build",
+    "check": "tsc --noEmit && strapi build",
+    "console": "strapi console",
+    "dev": "strapi develop",
+    "develop": "strapi develop",
+    "env:dev": "node scripts/create-dev-env.mjs",
+    "start": "strapi start",
+    "strapi": "strapi",
+    "typecheck": "tsc --noEmit",
+    "types:generate": "strapi ts:generate-types"
+  },
+  "dependencies": {
+    "@strapi/database": "5.52.1",
+    "@strapi/plugin-users-permissions": "5.52.1",
+    "@strapi/provider-upload-aws-s3": "5.52.1",
+    "@strapi/strapi": "5.52.1",
+    "pg": "8.20.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.3",
+    "styled-components": "6.1.19"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7",
+    "railway": "3.10.0",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": "24.18.0",
+    "pnpm": "11.18.0"
+  },
+  "packageManager": "pnpm@11.18.0",
+  "strapi": {
+    "uuid": "16da5137-2c7c-499f-ad5d-478f4cefd77a"
+  }
+}
