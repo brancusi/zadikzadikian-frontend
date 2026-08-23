@@ -79,3 +79,7 @@ Private permission evidence and archival locations stay outside public records. 
 See [the complete media intake and publication gate](./docs/media-intake.md).
 
 Netlify continuous deployment should be provided by the repository's existing Git integration. GitHub Actions validates but does not perform a second deployment. The Netlify adapter is intentionally absent: current adapter releases emit a runtime function, while this preview must remain entirely static.
+
+## Nonproduction Railway staging
+
+A separate Railway-generated URL continuously shows accepted `main` design progress without changing the production hosting path. Netlify remains authoritative; Railway is a noindex staging preview only. See [`docs/operations/railway-staging.md`](./docs/operations/railway-staging.md) for topology, deployment flow, verification, limitations, and guarded cleanup.

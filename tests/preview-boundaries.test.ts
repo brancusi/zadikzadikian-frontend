@@ -72,13 +72,20 @@ describe('generated preview boundaries', () => {
     expect(sample).toContain('original abstract study');
   });
 
-  it('ships a closed robots policy and Netlify noindex header', () => {
+  it('ships closed robots and host-specific preview headers', () => {
     expect(readFileSync(join(dist, 'robots.txt'), 'utf8')).toBe('User-agent: *\nDisallow: /\n');
 
     const netlify = readFileSync(join(root, 'netlify.toml'), 'utf8');
     expect(netlify).toContain('publish = "dist"');
     expect(netlify).toContain('X-Robots-Tag = "noindex, nofollow, noarchive"');
     expect(netlify).toContain("form-action 'none'");
+
+    const caddy = readFileSync(join(root, 'Caddyfile'), 'utf8');
+    expect(caddy).toContain('root * dist');
+    expect(caddy).toContain('X-Robots-Tag "noindex, nofollow, noarchive"');
+    expect(caddy).toContain("form-action 'none'");
+    expect(caddy).toContain('rewrite @notFound /404.html');
+    expect(caddy).not.toContain('{path}/index.html /index.html');
   });
 
   it('contains only tiny, checksummed project-created media studies', () => {
