@@ -33,11 +33,17 @@ Run the complete local gate:
 pnpm validate
 ```
 
-That performs Astro type checking, a production build, focused preview-boundary and design-system tests, and accessibility-oriented static HTML validation.
+That verifies preserved design-source integrity and media records, performs Astro type checking and a production build, runs focused preview-boundary/design-system tests, and validates the static HTML.
 
 ## Design system
 
-[`docs/design-system.md`](./docs/design-system.md) is the authoritative visual contract. Its single token owner is `src/styles/tokens.css`; reusable Astro components live in `src/components/`. The contract records the captain-supplied source provenance, accessibility and responsive adaptations, extension rules, and intentionally omitted unlicensed assets.
+The design system has three distinct layers:
+
+1. [`design-sources/zadikian/original/`](./design-sources/zadikian/original/) is the complete, immutable private source/reference authorized by the captain/team for repository retention;
+2. [`docs/design-system.md`](./docs/design-system.md) is the reviewed, summarized production contract; and
+3. [`src/styles/tokens.css`](./src/styles/tokens.css) plus reusable [`src/components/`](./src/components/) are the production implementation.
+
+Future visual work must consult both the original source and summarized contract. Preserved proposal/runtime files are not executed or built. Archive artwork is reference-only and not cleared for public use; every public asset still passes the media/license gate. See the [preserved-source README and manifests](./design-sources/zadikian/README.md).
 
 ## Representative routes
 

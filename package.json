@@ -11,12 +11,13 @@
   "scripts": {
     "dev": "astro dev",
     "validate:media": "node scripts/validate-media.ts",
-    "check": "node scripts/validate-media.ts && astro check",
-    "build": "node scripts/validate-media.ts && astro build",
+    "validate:design-sources": "node scripts/validate-design-sources.ts",
+    "check": "node scripts/validate-design-sources.ts && node scripts/validate-media.ts && astro check",
+    "build": "node scripts/validate-design-sources.ts && node scripts/validate-media.ts && astro build",
     "preview": "astro preview",
-    "test": "node scripts/validate-media.ts && astro build && vitest run && html-validate \"dist/**/*.html\"",
-    "test:built": "vitest run && html-validate \"dist/**/*.html\"",
-    "validate": "node scripts/validate-media.ts && astro check && astro build && vitest run && html-validate \"dist/**/*.html\""
+    "test": "node scripts/validate-design-sources.ts && node scripts/validate-media.ts && astro build && vitest run && html-validate \"dist/**/*.html\"",
+    "test:built": "node scripts/validate-design-sources.ts && vitest run && html-validate \"dist/**/*.html\"",
+    "validate": "node scripts/validate-design-sources.ts && node scripts/validate-media.ts && astro check && astro build && vitest run && html-validate \"dist/**/*.html\""
   },
   "dependencies": {
     "astro": "7.1.6",

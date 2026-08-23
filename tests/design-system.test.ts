@@ -80,7 +80,7 @@ describe("authoritative Zadikian design-system foundation", () => {
     expect(home).not.toMatch(/fonts\.googleapis\.com|fonts\.gstatic\.com/);
   });
 
-  it("records the reviewed source and intentional asset omissions", () => {
+  it("records the complete source layer and public asset boundaries", () => {
     const contract = readFileSync(
       join(root, "docs", "design-system.md"),
       "utf8",
@@ -88,11 +88,11 @@ describe("authoritative Zadikian design-system foundation", () => {
     expect(contract).toContain(
       "5adb2e06afb5476316b6ce828a67e6eafcce8e43bf8fae01091afb0ba5e41642",
     );
+    expect(contract).toContain("design-sources/zadikian/original/");
+    expect(contract).toContain("reference-only / not cleared for public use");
+    expect(contract).toContain("None is imported into `src/`, `public/`, or the production build");
     expect(contract).toContain(
-      "No artwork photograph from the archive was imported.",
-    );
-    expect(contract).toContain(
-      "archive contains neither font files nor a font license",
+      "archive contains neither font binaries nor a font license",
     );
   });
 });

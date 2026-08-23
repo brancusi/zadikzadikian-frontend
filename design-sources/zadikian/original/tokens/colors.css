@@ -1,0 +1,32 @@
+:root{
+/* Gallery neutrals */
+--paper:#FBFAF6;
+--paper-warm:#F4F1E9;
+--surface-card:#FFFFFF;
+--ink:#161512;
+--ink-2:#494640;
+--ink-3:#8B857A;
+--hairline:#E4E0D6;
+--hairline-dark:#161512;
+/* Gold — the artist's signature material */
+--gold:#A8842C;
+--gold-deep:#7E611C;
+--gold-leaf:linear-gradient(135deg,#C9A84C 0%,#A8842C 45%,#8A6B20 60%,#D8BC66 100%); /* @kind color */
+/* Pigment primaries — drawn from the cast-plaster works */
+--pigment-cadmium:#E63329;
+--pigment-chrome:#F2C400;
+--pigment-ultramarine:#1F5FB4;
+--pigment-turquoise:#35AEB2;
+--pigment-magenta:#E23A77;
+/* Semantic aliases */
+--surface-page:var(--paper);
+--surface-plinth:var(--paper-warm);
+--text-display:var(--ink);
+--text-body:var(--ink-2);
+--text-meta:var(--ink-3);
+--accent:var(--gold);
+--rule:var(--hairline);
+--rule-strong:var(--hairline-dark);
+--link:var(--ink);
+--link-hover:var(--gold);
+}

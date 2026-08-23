@@ -1,0 +1,28 @@
+:root{
+/* Families */
+--font-serif-display:'Libre Caslon Display',
+ 'Big Caslon',Georgia,serif;
+--font-serif-text:'Libre Caslon Text',Georgia,serif;
+--font-grotesque:'Helvetica Neue',Helvetica,Arial,sans-serif;
+/* Scale — display sizes are meant to be LARGE; typography leads every page */
+--text-colossal:clamp(72px,9vw,128px);
+--text-display:64px;
+--text-headline:40px;
+--text-title:28px;
+--text-lede:21px;
+--text-body:17px;
+--text-meta:13px;
+--text-caption:11px;
+/* Leading */
+--leading-display:1.02;
+--leading-headline:1.12;
+--leading-body:1.62;
+--leading-meta:1.5;
+/* Tracking */
+--tracking-display:-0.015em;
+--tracking-meta:0.14em; /* uppercase labels */
+--tracking-caption:0.08em;
+/* Weights — Caslon ships 400/700 only; grotesque stays light-handed */
+--weight-regular:400;
+--weight-bold:700;
+}

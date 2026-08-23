@@ -1,0 +1,49 @@
+<!-- @dsCard group="Proposal" viewport="1280x860" name="Acquisition proposal" subtitle="Click-through: cover, statement, works, future work, CV, press" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Zadikian — Acquisition proposal</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body><div id="root"></div>
+<script type="text/babel" src="PagesIntro.jsx"></script>
+<script type="text/babel" src="PagesBody.jsx"></script>
+<script type="text/babel">
+const { Folio } = window.ZadikianDesignSystem_41ec0e;
+const PAGES = [
+  { id: 'cover', label: 'Cover', el: window.CoverPage },
+  { id: 'artist', label: 'The artist', el: window.StatementPage },
+  { id: 'works', label: 'Works', el: window.WorksPage },
+  { id: 'project', label: 'Future work', el: window.ProjectPage },
+  { id: 'cv', label: 'CV', el: window.CVPage },
+  { id: 'press', label: 'Press', el: window.PressPage },
+];
+function App() {
+  const [i, setI] = React.useState(() => parseInt(localStorage.getItem('zadikian-proposal-page') || '0', 10) || 0);
+  React.useEffect(() => { localStorage.setItem('zadikian-proposal-page', String(i)); }, [i]);
+  React.useEffect(() => {
+    const k = (e) => { if (e.key === 'ArrowRight') setI(v => Math.min(v + 1, PAGES.length - 1)); if (e.key === 'ArrowLeft') setI(v => Math.max(v - 1, 0)); };
+    window.addEventListener('keydown', k); return () => window.removeEventListener('keydown', k);
+  }, []);
+  const navItem = (p, idx) => (
+    <a key={p.id} href={'#' + p.id} onClick={(e) => { e.preventDefault(); setI(idx); }}
+      style={{ fontFamily: 'var(--font-grotesque)', fontSize: 'var(--text-caption)', letterSpacing: 'var(--tracking-meta)', textTransform: 'uppercase', textDecoration: 'none', color: idx === i ? 'var(--text-display)' : 'var(--text-meta)', borderBottom: idx === i ? '1px solid var(--gold)' : '1px solid transparent', paddingBottom: 4 }}>{p.label}</a>
+  );
+  const Page = PAGES[i].el;
+  return (
+    <div data-screen-label={PAGES[i].label} style={{ maxWidth: 1280, margin: '0 auto', minHeight: '100vh', display: 'flex', flexDirection: 'column', padding: '0 var(--page-margin)', boxSizing: 'border-box' }}>
+      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', padding: 'var(--space-5) 0', borderBottom: '1px solid var(--rule)' }}>
+        <span style={{ fontFamily: 'var(--font-serif-display)', fontSize: 20, color: 'var(--text-display)' }}>Zadik Zadikian</span>
+        <div style={{ display: 'flex', gap: 'var(--space-6)' }}>{PAGES.map(navItem)}</div>
+      </nav>
+      <main style={{ flex: 1, padding: 'var(--space-8) 0 var(--space-9)' }}><Page /></main>
+      <div style={{ paddingBottom: 'var(--space-5)' }}>
+        <Folio left="Zadik Zadikian" center="Acquisition proposal — confidential" right={`0${i + 1} / 0${PAGES.length}`} />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>
