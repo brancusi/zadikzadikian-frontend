@@ -33,7 +33,11 @@ Run the complete local gate:
 pnpm validate
 ```
 
-That performs Astro type checking, a production build, focused preview-boundary tests, and accessibility-oriented static HTML validation.
+That performs Astro type checking, a production build, focused preview-boundary and design-system tests, and accessibility-oriented static HTML validation.
+
+## Design system
+
+[`docs/design-system.md`](./docs/design-system.md) is the authoritative visual contract. Its single token owner is `src/styles/tokens.css`; reusable Astro components live in `src/components/`. The contract records the captain-supplied source provenance, accessibility and responsive adaptations, extension rules, and intentionally omitted unlicensed assets.
 
 ## Representative routes
 
