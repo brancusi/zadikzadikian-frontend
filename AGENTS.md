@@ -6,7 +6,7 @@ This file is the project's committed home for project-intrinsic agent knowledge:
 - Preserve the public preview boundaries documented in `README.md` and enforced by `tests/preview-boundaries.test.ts` until a separately approved production phase.
 - Keep Astro output fully static. `astro.config.ts` deliberately omits the current Netlify adapter because it emits a runtime Function; Netlify configuration remains in `netlify.toml`.
 - Route all public image/video records through `src/lib/media/model.ts`; `scripts/validate-media.ts` is the build-time rights, accessibility, reference, and content-identity gate.
-- Start visual work from `docs/design-system.md`; `src/styles/tokens.css` is the sole design-token owner and `tests/design-system.test.ts` guards the contract.
+- Visual work must consult both the immutable full reference in `design-sources/zadikian/original/` and the summarized contract in `docs/design-system.md`; `src/styles/tokens.css` remains the sole production token owner. Never execute or edit preserved source in place; `scripts/validate-design-sources.ts` guards its manifest.
 
 ## Maintaining this file
 

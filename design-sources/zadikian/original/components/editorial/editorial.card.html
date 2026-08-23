@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" viewport="700x480" name="Editorial" subtitle="CVList, PressItem" -->
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{padding:24px 32px}</style></head>
+<body><div id="root"></div>
+<script type="text/babel">
+const { CVList, PressItem } = window.ZadikianDesignSystem_41ec0e;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{ display: 'grid', gap: 36 }}>
+    <CVList heading="Selected exhibitions" entries={[
+      { year: 2026, text: 'The Studio, Armenian Pavilion, 61st Venice Biennale' },
+      { year: 2025, text: 'RETURN, Cafesjian Center for the Arts, Yerevan' },
+      { year: 2024, text: 'Path to Nine, Brooklyn Museum, New York' },
+      { year: 1978, text: '1,000 Gold Bricks, Tony Shafrazi Gallery, Tehran' },
+    ]} />
+    <PressItem quote="One of the leading sculptors in the realm of contemporary alchemy." publication="The Armenian Mirror-Spectator" year="2026" />
+  </div>
+);
+</script></body></html>

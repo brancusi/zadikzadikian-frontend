@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "original-5adb2e06afb5",
+  "archiveSha256": "5adb2e06afb5476316b6ce828a67e6eafcce8e43bf8fae01091afb0ba5e41642",
+  "excludedArchiveEntries": [],
+  "excludedExternalArtifacts": [
+    {
+      "path": "Zadikian-Design-System.zip",
+      "bytes": 2340201,
+      "sha256": "5adb2e06afb5476316b6ce828a67e6eafcce8e43bf8fae01091afb0ba5e41642",
+      "reason": "The downloaded ZIP transport container is excluded; all 75 safe entries are retained byte-for-byte under original/."
+    }
+  ],
+  "reviewedExclusionCategories": [
+    {
+      "category": "unsafe paths",
+      "excludedPaths": []
+    },
+    {
+      "category": "symlinks or special files",
+      "excludedPaths": []
+    },
+    {
+      "category": "actual secrets or credentials",
+      "excludedPaths": []
+    },
+    {
+      "category": "OS metadata (.DS_Store or __MACOSX)",
+      "excludedPaths": []
+    },
+    {
+      "category": "dependency caches (including node_modules)",
+      "excludedPaths": []
+    },
+    {
+      "category": "entries unsafe for Git",
+      "excludedPaths": []
+    }
+  ]
+}

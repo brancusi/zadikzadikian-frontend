@@ -1,22 +1,28 @@
 # Zadikian website design system
 
-This document is the authoritative contract for visual design in this repository. The implementation owner is [`src/styles/tokens.css`](../src/styles/tokens.css); components and pages consume those tokens and must not declare competing custom properties.
+This document is the reviewed, summarized production contract for visual design—not a substitute for the supplied source. The three design-system layers are:
+
+1. the complete immutable private reference in [`design-sources/zadikian/original/`](../design-sources/zadikian/original/);
+2. this summarized production contract; and
+3. the implementation owned by [`src/styles/tokens.css`](../src/styles/tokens.css) and reusable [`src/components/`](../src/components/).
+
+Components and pages consume the implementation tokens and must not declare competing custom properties. Future site design must consult both the complete original source and this contract before changing production code.
 
 ## Provenance and intake
 
-The foundation was adopted from the captain-provided private Dropbox archive `Zadikian-Design-System.zip`.
+The captain/team supplied the private Dropbox archive `Zadikian-Design-System.zip` and authorized retention in this private repository.
 
 - SHA-256: `5adb2e06afb5476316b6ce828a67e6eafcce8e43bf8fae01091afb0ba5e41642`
 - Downloaded size: 2,340,201 bytes
-- Inventory: 75 entries; 2,456,068 expanded bytes
-- Safety review before extraction: CRC valid; no nested archives, symlinks, executable bits, encrypted entries, absolute paths, `..` traversal, case collisions, hidden OS metadata, or special file types
-- Review note: three JavaScript files were classified as potentially active content and inspected as source. The archive was extracted only after the safety review passed.
+- Inventory retained: 75 files; 2,456,068 bytes
+- Safety review before extraction: CRC valid; no nested archives, symlinks, executable bits, encrypted entries, absolute paths, `..` traversal, case collisions, OS metadata, dependency caches, credentials, or special file types
+- Deterministic provenance, per-file hashes/modes, and the sole exclusion (the ZIP transport container) are recorded in [`design-sources/zadikian/source-manifest.json`](../design-sources/zadikian/source-manifest.json) and [`exclusions.json`](../design-sources/zadikian/exclusions.json).
 
-The ZIP, generated design-tool runtime, package caches, thumbnails, and exports are not repository artifacts and must not be committed.
+The source proposal/runtime files, examples, documentation, thumbnails, exports, and artwork references are preserved byte-for-byte but are not executed, installed, imported, or included in the production build. `original/` must not be edited in place; later source revisions require separately identified preserved directories and manifests.
 
 ## Authority and boundaries
 
-The supplied system is the visual source. This website implementation translates it into static Astro, semantic HTML, and repository constraints; it does not copy the proposal application or its content.
+The supplied system is the complete visual source. This contract reviews and translates it into static Astro, semantic HTML, and repository constraints; it does not adopt the proposal application or its content.
 
 Adopted contracts:
 
@@ -87,6 +93,6 @@ Custom properties cannot drive media-query conditions, so `--breakpoint-narrow` 
 
 ## Asset and license decisions
 
-No artwork photograph from the archive was imported. The archive says the nine JPEGs were copied from a mounted `numbered/` folder and supplies no photographer credit, license, public-web permission, or crop/alteration scope. They remain useful private visual references, but fail this repository's media intake gate. Existing project-created CC0 fixtures remain the safe local fallback.
+All nine archive artwork JPEGs are retained privately under `design-sources/zadikian/original/assets/web/` as **reference-only / not cleared for public use**. None is imported into `src/`, `public/`, or the production build. The source says they were copied from a mounted `numbered/` folder but grants no photographer credit, license, public-web permission, or crop/alteration scope, so public use still fails this repository's media/license gate. Existing project-created CC0 fixtures remain the safe production fallback.
 
-No font was imported because the archive contains neither font files nor a font license. No logo or icon asset exists in the source; the artist name set in the display family is the wordmark. The archive contains no standalone asset license file to preserve. Future approved assets must retain their license/provenance files and pass `docs/media-intake.md` before use.
+The source's font references are preserved, but the archive contains neither font binaries nor a font license. No logo or icon asset exists in the source; the artist name set in the display family is the wordmark. The archive contains no standalone asset license. Any future public asset must retain its license/provenance evidence and pass [`docs/media-intake.md`](./media-intake.md) before use.
