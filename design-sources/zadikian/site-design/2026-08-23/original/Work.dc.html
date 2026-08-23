@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/base.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/styles.css">
+  <script src="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_bundle.js"></script>
+  <script src="image-slot.js"></script>
+  <style>
+    body{margin:0;background:var(--paper);color:var(--ink)}
+    a{color:var(--link);text-decoration:none;transition:color .18s ease}
+    a:hover{color:var(--gold)}
+    html{scroll-behavior:smooth}
+  </style>
+</helmet>
+<div data-screen-label="Work" style="background:var(--paper);min-height:100vh">
+  <nav style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;padding:22px clamp(32px,7vw,120px);border-bottom:1px solid var(--rule)">
+    <a href="Home.dc.html" style="font-family:var(--font-serif-display);font-size:21px;letter-spacing:-0.01em">Zadik Zadikian</a>
+    <div style="display:flex;gap:32px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="Work.dc.html" style="color:var(--gold)">Work</a>
+      <a href="Artist.dc.html">Artist</a>
+      <a href="Statements.dc.html">Statements</a>
+      <a href="Information.dc.html">Information</a>
+    </div>
+  </nav>
+  <header data-screen-label="Work intro" style="padding:clamp(56px,9vw,120px) clamp(32px,7vw,120px) clamp(40px,6vw,72px)">
+    <h1 style="font-family:var(--font-serif-display);font-weight:400;font-size:var(--text-colossal);line-height:1.02;letter-spacing:-0.015em;margin:0">Work</h1>
+    <div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-top:32px">
+      <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-lede);line-height:1.6;color:var(--ink-2);max-width:58ch">A retrospective path in five chapters — chronology explains evolution; themes explain continuity. A complete index of every series follows below.</p>
+      <div style="display:flex;gap:24px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;white-space:nowrap">
+        <a href="#ground">I Ground</a><a href="#field">II Field</a><a href="#unit">III Unit</a><a href="#body">IV Body</a><a href="#open-structure">V Open</a><a href="#index" style="color:var(--gold)">Index</a>
+      </div>
+    </div>
+  </header>
+  <section id="ground" data-screen-label="Chapter I Ground" style="padding:clamp(40px,6vw,72px) clamp(32px,7vw,120px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Chapter I — 1950s to 1970" index="Ground" title="The body as first measure" hint-size="100%,180px"></x-import>
+    <p style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2);max-width:62ch;margin:32px 0 0">Academic skill, archetype, fragment, and erotic form. Even the most serial stacks remain calibrated to bodily movement, reach, labor, and architectural passage.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:48px">
+      <figure style="margin:0">
+        <div style="height:300px"><image-slot id="work-figures" shape="rect" placeholder="Figures — dated major work"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Figures" year="selected works" medium="Series — dates and media pending inventory" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:300px"><image-slot id="work-portraits" shape="rect" placeholder="Portraits — curated selection"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Portraits" year="selected works" medium="Series — distinguished from studies" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:300px"><image-slot id="work-labrea" shape="rect" placeholder="La Brea series — named heads"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="La Brea series" year="dates pending" medium="Portrait and figure field" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="field" data-screen-label="Chapter II Field" style="padding:clamp(40px,6vw,72px) clamp(32px,7vw,120px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Chapter II — 1973 to 1978" index="Field" title="The room becomes sculpture" hint-size="100%,180px"></x-import>
+    <p style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2);max-width:62ch;margin:32px 0 0">Architecture as medium; color and gold as environmental conditions. Pale yellow unified 112 Greene Street in 1973 while open doors and windows let air enter the work; the gilded rooms followed — acts of equalization, not decoration.</p>
+    <div style="display:grid;grid-template-columns:minmax(320px,1.7fr) minmax(260px,1fr);gap:40px;margin-top:48px">
+      <figure style="margin:0">
+        <div style="height:380px"><image-slot id="work-spaces" shape="rect" placeholder="Spaces — gilded interior, installation view"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Spaces" year="1973–78" medium="Total-space interventions — chronology under recovery" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:380px"><image-slot id="work-solis" shape="rect" placeholder="Solis"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Solis" year="" medium="A meditation on the sun as the greatest platitude" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="unit" data-screen-label="Chapter III Unit" style="padding:clamp(40px,6vw,72px) clamp(32px,7vw,120px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Chapter III — 1975 onward" index="Unit" title="Brick, gold, and serial order" hint-size="100%,180px"></x-import>
+    <div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;margin-top:32px">
+      <p style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2);max-width:62ch;margin:0">Brick, ingot, serial order, air, interval, and portable construction. The longitudinal backbone of the practice, from the lost Tehran bricks of 1978 to <em>Path to Nine</em> and <em>Made in USA</em>.</p>
+      <a href="Unit-Structure.dc.html" style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px;white-space:nowrap">Chapter page →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:40px;margin-top:48px">
+      <figure style="margin:0">
+        <div style="height:300px"><image-slot id="work-stacks" shape="rect" placeholder="Gold stacks"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Stacks" year="ongoing" medium="Gilded ingots, stainless steel rods" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:300px"><image-slot id="work-pathtonine" shape="rect" placeholder="Path to Nine — Brooklyn Museum"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Path to Nine" year="2024" medium="Gilded units — component count under verification" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:300px"><image-slot id="work-aluminum" shape="rect" placeholder="Aluminum stacks"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Aluminum stacks" year="" medium="Serial form in non-gold metal" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="body" data-screen-label="Chapter IV Body" style="padding:clamp(40px,6vw,72px) clamp(32px,7vw,120px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Chapter IV — 1980s onward" index="Body" title="Figuration under pressure" hint-size="100%,180px"></x-import>
+    <p style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2);max-width:62ch;margin:32px 0 0">Gravity, action, casting, contingency, and recognizable form at the edge of abstraction. In <em>Foreigners</em>, wet clay is lifted and thrown so that faces emerge through impact — the individual appears through the rule.</p>
+    <div style="display:grid;grid-template-columns:minmax(320px,1.7fr) minmax(260px,1fr);gap:40px;margin-top:48px">
+      <figure style="margin:0">
+        <div style="height:380px"><image-slot id="work-foreigners" shape="rect" placeholder="Foreigners — gravity-formed faces"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Foreigners" year="" medium="Clay formed by water, earth, and gravity" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:380px"><image-slot id="work-shellcast" shape="rect" placeholder="Shell cast"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Shell cast" year="" medium="Casting — process under verification" hint-size="100%,80px"></x-import></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section id="open-structure" data-screen-label="Chapter V Open structure" style="padding:clamp(40px,6vw,72px) clamp(32px,7vw,120px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Chapter V — 2024 onward" index="Open structure" title="Color, touch, participation" hint-size="100%,180px"></x-import>
+    <p style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2);max-width:62ch;margin:32px 0 0">Color, touch, movement, and work that remains in formation. The 2026 Armenian Pavilion displaces gold with pigment-infused movable blocks produced and rearranged in public — from a common surface to a common procedure.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px;margin-top:48px">
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.WorkFigure" src="assets/web/A-001.jpg" title="Untitled (three panels)" year="2025–26" medium="Pigmented cast plaster" dimensions="Dimensions pending inventory" catalog-no="A-001" hint-size="100%,340px"></x-import>
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.WorkFigure" src="assets/web/A-020.jpg" title="Untitled (turquoise block)" year="2025–26" medium="Pigmented cast plaster" dimensions="Dimensions pending inventory" catalog-no="A-020" hint-size="100%,340px"></x-import>
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.WorkFigure" src="assets/web/A-011.jpg" title="Untitled (red cube with steps)" year="2025–26" medium="Pigmented cast plaster" dimensions="Dimensions pending inventory" catalog-no="A-011" hint-size="100%,340px"></x-import>
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.WorkFigure" src="assets/web/A-017.jpg" title="Untitled (red bench and panels)" year="2025–26" medium="Pigmented cast plaster" dimensions="Dimensions pending inventory" catalog-no="A-017" hint-size="100%,340px"></x-import>
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.WorkFigure" src="assets/web/A-026.jpg" title="Untitled (magenta cube)" year="2025–26" medium="Pigmented cast plaster" dimensions="Dimensions pending inventory" catalog-no="A-026" hint-size="100%,340px"></x-import>
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.WorkFigure" src="assets/web/A-023.jpg" title="Untitled (crimson cube)" year="2025–26" medium="Pigmented cast plaster" dimensions="Dimensions pending inventory" catalog-no="A-023" hint-size="100%,340px"></x-import>
+    </div>
+  </section>
+  <section id="index" data-screen-label="Complete index" style="padding:clamp(56px,9vw,120px) clamp(32px,7vw,120px) clamp(80px,12vw,200px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="All works — complete series index" index="17 collections" title="Index" hint-size="100%,180px"></x-import>
+    <p style="font-family:var(--font-grotesque);font-size:13px;line-height:1.6;color:var(--ink-3);max-width:62ch;margin:24px 0 0">Alphabetical access to every legacy collection. All existing URLs redirect here. A work can belong to more than one chapter.</p>
+    <div style="margin-top:40px">
+      <sc-for list="{{ seriesIndex }}" as="s" hint-placeholder-count="17">
+        <a href="{{ s.href }}" style="display:grid;grid-template-columns:minmax(160px,1.4fr) minmax(120px,1fr) minmax(120px,1fr) auto;gap:24px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--rule)">
+          <span style="font-family:var(--font-serif-text);font-size:var(--text-body)">{{ s.name }}</span>
+          <span style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">{{ s.chapter }}</span>
+          <span style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">{{ s.note }}</span>
+          <span style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">→</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+  <footer style="border-top:2px solid var(--ink);padding:40px clamp(32px,7vw,120px) 56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.08em;color:var(--ink-3)">
+    <span>All works © Zadik Zadikian. Reproduction by permission.</span>
+    <div style="display:flex;gap:24px"><a href="Home.dc.html">Home</a><a href="Artist.dc.html">Artist</a><a href="Information.dc.html">Contact</a></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const c = {
+      ground: 'I — Ground', field: 'II — Field', unit: 'III — Unit',
+      body: 'IV — Body', open: 'V — Open structure', obj: 'Objects / Use',
+    };
+    const seriesIndex = [
+      { name: 'Aluminum stacks', chapter: c.unit, note: 'Serial form in metal', href: '#unit' },
+      { name: 'Figures', chapter: c.ground, note: 'Full body, modeled presence', href: '#ground' },
+      { name: 'Foreigners', chapter: c.body, note: 'Gravity-formed faces', href: '#body' },
+      { name: 'Functional', chapter: c.obj, note: 'Pending studio inventory', href: '#index' },
+      { name: 'La Brea series', chapter: c.ground, note: 'Named heads', href: '#ground' },
+      { name: 'Love on the Beat', chapter: c.obj, note: 'Pending artist text', href: '#index' },
+      { name: 'Objects', chapter: c.obj, note: 'Labor, found form', href: '#index' },
+      { name: 'Palm', chapter: c.obj, note: 'Pending studio inventory', href: '#index' },
+      { name: 'Path to Nine', chapter: c.unit, note: 'Brooklyn Museum, 2024', href: 'Unit-Structure.dc.html' },
+      { name: 'Plateau series', chapter: c.obj, note: 'Pending studio inventory', href: '#index' },
+      { name: 'Portraits', chapter: c.ground, note: 'Curated selection', href: '#ground' },
+      { name: 'Shell cast', chapter: c.body, note: 'Casting, negative and positive', href: '#body' },
+      { name: 'Solis', chapter: c.field, note: 'Focused work page', href: '#field' },
+      { name: 'Spaces', chapter: c.field, note: 'Room-scale transformation, 1973–78', href: '#field' },
+      { name: 'Stacks', chapter: c.unit, note: 'The longitudinal backbone', href: 'Unit-Structure.dc.html' },
+      { name: 'Studies', chapter: c.ground, note: 'Edited sequences of 12–20', href: '#ground' },
+      { name: 'Waves', chapter: c.open, note: 'Bridges Unit and Open structure', href: '#open-structure' },
+    ];
+    return { seriesIndex };
+  }
+}
+</script>
+</body>
+</html>

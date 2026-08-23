@@ -75,7 +75,7 @@ describe("authoritative Zadikian design-system foundation", () => {
     expect(home).toContain(">Zadik Zadikian</a>");
     expect(home).toContain('<header class="section-heading">');
     expect(home).toContain(
-      '<h2 id="selected-work-heading">Work, with room to breathe.</h2>',
+      '<h2 id="chapters-heading">A retrospective path</h2>',
     );
     expect(home).not.toMatch(/fonts\.googleapis\.com|fonts\.gstatic\.com/);
   });
@@ -94,5 +94,13 @@ describe("authoritative Zadikian design-system foundation", () => {
     expect(contract).toContain(
       "archive contains neither font binaries nor a font license",
     );
+
+    const siteManifest = readFileSync(
+      join(root, "design-sources", "zadikian", "site-design", "2026-08-23", "source-manifest.json"),
+      "utf8",
+    );
+    expect(siteManifest).toContain("73c2292a098504be98caa5f1f74da75b1ba03ccbad22a99b229b07b504c3f821");
+    expect(siteManifest).toContain('"fileCount": 36');
+    expect(contract).toContain("site-design/2026-08-23/original/");
   });
 });

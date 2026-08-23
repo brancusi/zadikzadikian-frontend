@@ -1,14 +1,14 @@
 ---
 const pathname = Astro.url.pathname;
 const navItems = [
-  { href: '/work/', label: 'Work', active: pathname === '/' || pathname.startsWith('/work/') },
-  { href: '/about/', label: 'About', active: pathname.startsWith('/about/') },
+  { href: '/work/', label: 'Work', active: pathname.startsWith('/work/') },
+  { href: '/about/', label: 'About', active: pathname.startsWith('/about/') || pathname.startsWith('/artist-statement/') },
   { href: '/cv/', label: 'CV', active: pathname.startsWith('/cv/') },
   { href: '/contact/', label: 'Contact', active: pathname.startsWith('/contact/') },
 ];
 ---
 <header class="site-header">
-  <a class="wordmark" href="/" aria-label="Zadik Zadikian, preview home">Zadik Zadikian</a>
+  <a class="wordmark" href="/" aria-label="Zadik Zadikian, preview home" aria-current={pathname === '/' ? 'page' : undefined}>Zadik Zadikian</a>
   <nav aria-label="Primary navigation">
     <ul>
       {navItems.map((item) => (

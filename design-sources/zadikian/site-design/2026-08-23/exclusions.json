@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "sourceRevision": "site-design-2026-08-23-73c2292a0985",
+  "payloadArchiveSha256": "73c2292a098504be98caa5f1f74da75b1ba03ccbad22a99b229b07b504c3f821",
+  "excludedPayloadEntries": [],
+  "excludedTransportArtifacts": [
+    {
+      "path": "03.zip",
+      "bytes": 2523923,
+      "sha256": "3485cc2adf48d5b29954595075077a6c01facfe9a592f8e88f198bab40e9be1e",
+      "reason": "Dropbox folder-download wrapper; it contains one unsafe absolute directory entry and the nested payload archive. The wrapper itself is not meaningful source and generic extraction was refused."
+    },
+    {
+      "path": "03.zip!/",
+      "bytes": 0,
+      "sha256": null,
+      "reason": "Unsafe absolute-path directory entry in the Dropbox transport wrapper; never extracted."
+    },
+    {
+      "path": "03.zip!/Artist website redesign mockup.zip",
+      "bytes": 2523627,
+      "sha256": "73c2292a098504be98caa5f1f74da75b1ba03ccbad22a99b229b07b504c3f821",
+      "reason": "Nested ZIP transport container; all 36 safe payload entries are retained byte-for-byte under original/."
+    }
+  ],
+  "reviewedExclusionCategories": [
+    {
+      "category": "unsafe paths",
+      "excludedPaths": [
+        "03.zip!/"
+      ]
+    },
+    {
+      "category": "symlinks or special files",
+      "excludedPaths": []
+    },
+    {
+      "category": "actual secrets or credentials",
+      "excludedPaths": []
+    },
+    {
+      "category": "OS metadata (.DS_Store, __MACOSX, Thumbs.db, desktop.ini)",
+      "excludedPaths": []
+    },
+    {
+      "category": "dependency caches (including node_modules)",
+      "excludedPaths": []
+    },
+    {
+      "category": "entries unsafe for Git",
+      "excludedPaths": []
+    }
+  ],
+  "retainedDespiteActiveContent": [
+    {
+      "path": "original/support.js",
+      "reason": "Meaningful prototype runtime; active behavior reviewed and production execution prohibited."
+    },
+    {
+      "path": "original/image-slot.js",
+      "reason": "Meaningful prototype image-slot interaction; active behavior reviewed and production execution prohibited."
+    },
+    {
+      "path": "original/_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_bundle.js",
+      "reason": "Meaningful design-system prototype bundle; active behavior reviewed and production execution prohibited."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/base.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/styles.css">
+  <script src="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_bundle.js"></script>
+  <script src="image-slot.js"></script>
+  <style>
+    body{margin:0;background:var(--paper);color:var(--ink)}
+    a{color:var(--link);text-decoration:none;transition:color .18s ease}
+    a:hover{color:var(--gold)}
+  </style>
+</helmet>
+<div data-screen-label="Unit / Structure chapter" style="background:var(--paper);min-height:100vh">
+  <nav style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;padding:22px clamp(32px,7vw,120px);border-bottom:1px solid var(--rule)">
+    <a href="Home.dc.html" style="font-family:var(--font-serif-display);font-size:21px;letter-spacing:-0.01em">Zadik Zadikian</a>
+    <div style="display:flex;gap:32px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="Work.dc.html" style="color:var(--gold)">Work</a>
+      <a href="Artist.dc.html">Artist</a>
+      <a href="Statements.dc.html">Statements</a>
+      <a href="Information.dc.html">Information</a>
+    </div>
+  </nav>
+  <div style="padding:18px clamp(32px,7vw,120px);font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">
+    <a href="Work.dc.html">Work</a> <span style="margin:0 8px">—</span> Chapter III
+  </div>
+  <header data-screen-label="Chapter head" style="padding:clamp(32px,5vw,64px) clamp(32px,7vw,120px) clamp(40px,6vw,72px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Chapter III — 1975 to the present" index="Unit" title="Brick, gold, and serial order" size="colossal" hint-size="100%,280px"></x-import>
+    <div style="display:grid;grid-template-columns:minmax(300px,1.5fr) minmax(260px,1fr);gap:56px;margin-top:48px">
+      <div>
+        <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-lede);line-height:1.6;color:var(--ink-2)">The brick allowed the gold field to become portable. The 1978 Gold Bricks project in Tehran introduced a simple building unit whose identity could shift through casting, gilding, stacking, spacing, and repetition. Later stacks retain the memory of construction without arriving at a final building. Their gaps matter as much as their mass.</p>
+        <p style="margin:20px 0 0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">These stacks do not simply repeat Minimalist modules. They remain materially imperfect and optically unstable; gaps allow light, air, and bodies to pass. Repetition becomes a way to stage nonidentity inside order — the unit is complete enough to stand, yet incomplete enough to enter another configuration.</p>
+      </div>
+      <div style="border-top:2px solid var(--ink);padding-top:16px">
+        <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">Defining operations</div>
+        <div style="display:grid;gap:0;margin-top:16px;font-family:var(--font-serif-text);font-size:var(--text-body)">
+          <span style="padding:10px 0;border-bottom:1px solid var(--rule)">Casting</span>
+          <span style="padding:10px 0;border-bottom:1px solid var(--rule)">Gilding</span>
+          <span style="padding:10px 0;border-bottom:1px solid var(--rule)">Stacking</span>
+          <span style="padding:10px 0;border-bottom:1px solid var(--rule)">Spacing</span>
+          <span style="padding:10px 0;border-bottom:1px solid var(--rule)">Repeating</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section data-screen-label="Chapter works" style="padding:0 clamp(32px,7vw,120px) clamp(40px,6vw,72px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px">
+      <figure style="margin:0">
+        <div style="height:340px"><image-slot id="unit-tehran" shape="rect" placeholder="Archival image — Gold Bricks, Tehran, 1978"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Gold Bricks" year="1978" medium="Gilded bricks, Tehran" dimensions="Reportedly lost during the Iranian Revolution" hint-size="100%,90px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:340px"><image-slot id="unit-stacks" shape="rect" placeholder="Gold stacks — dated iteration"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Stacks" year="revisited over decades" medium="Gilded ingots; stainless steel rods spanning 9 ingots in 3 rows" dimensions="Each stack composed of 54 ingots" hint-size="100%,90px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:340px"><image-slot id="unit-aluminum" shape="rect" placeholder="Aluminum stacks"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Aluminum stacks" year="" medium="Aluminum" dimensions="The stack language independent of gold" hint-size="100%,90px"></x-import></figcaption>
+      </figure>
+      <figure style="margin:0">
+        <div style="height:340px"><image-slot id="unit-madeinusa" shape="rect" placeholder="Made in USA — Independent 20th Century, 2025"></image-slot></div>
+        <figcaption style="margin-top:12px"><x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Tombstone" title="Made in USA" year="2025" medium="160 gold-on-plaster units" dimensions="Nine-foot column" hint-size="100%,90px"></x-import></figcaption>
+      </figure>
+    </div>
+  </section>
+  <section data-screen-label="Work detail — Path to Nine" style="padding:clamp(56px,9vw,120px) clamp(32px,7vw,120px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Work detail" index="2024" title="Path to Nine" hint-size="100%,180px"></x-import>
+    <div style="display:grid;grid-template-columns:minmax(320px,1.6fr) minmax(280px,1fr);gap:56px;margin-top:48px">
+      <div>
+        <div style="height:460px"><image-slot id="unit-pathtonine" shape="rect" placeholder="Path to Nine — installation view, Brooklyn Museum"></image-slot></div>
+        <div style="margin-top:12px;font-family:var(--font-grotesque);font-size:11px;color:var(--ink-3)">Installation view, Solid Gold, Brooklyn Museum, 2024–25.</div>
+      </div>
+      <div>
+        <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)"><em>Path to Nine</em> is an investigation into structure, repetition, and the state of being. Three, six, and ultimately nine point into the mysterious: nine holds the unique property of a digital root — the sum of any multiple returns to itself, a reflection of the artist's long journey back to simple form.</p>
+        <p style="margin:16px 0 0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">Each stack is composed of 54 ingots; hidden steel rods span nine ingots in three rows. In the final stacks the count breaks the system — a departure in which the structure becomes something more than the sum of its parts.</p>
+        <div style="margin-top:32px">
+          <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SpecList" items="{{ pathToNineSpecs }}" hint-size="100%,260px"></x-import>
+        </div>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+          <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Button" variant="outline" href="Information.dc.html" hint-size="auto,48px">Loans & rights</x-import>
+          <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Button" variant="text" href="Work.dc.html#index" hint-size="auto,48px">Related works</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Chapter chronology" style="padding:0 clamp(32px,7vw,120px) clamp(40px,6vw,72px)">
+    <div style="display:grid;grid-template-columns:minmax(280px,1fr) minmax(320px,1.4fr);gap:56px;align-items:start">
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.PullQuote" quote="In the end, the ultimate finishing is to cast this whole endeavor in gold." attribution="Zadik Zadikian" source="Artist text, Stacks" hint-size="100%,240px"></x-import>
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.CVList" heading="Chronology markers" entries="{{ chapterChronology }}" hint-size="100%,320px"></x-import>
+    </div>
+  </section>
+  <section data-screen-label="Related chapters" style="padding:0 clamp(32px,7vw,120px) clamp(80px,12vw,160px)">
+    <div style="border-top:2px solid var(--ink);padding-top:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">Related chapters</div>
+    <div style="display:flex;gap:40px;flex-wrap:wrap;margin-top:24px;font-family:var(--font-serif-display);font-size:var(--text-title)">
+      <a href="Work.dc.html#field">II — Field →</a>
+      <a href="Work.dc.html#open-structure">V — Open structure →</a>
+    </div>
+  </section>
+  <footer style="border-top:2px solid var(--ink);padding:40px clamp(32px,7vw,120px) 56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.08em;color:var(--ink-3)">
+    <span>All works © Zadik Zadikian. Reproduction by permission.</span>
+    <div style="display:flex;gap:24px"><a href="Home.dc.html">Home</a><a href="Work.dc.html">Work</a><a href="Information.dc.html">Contact</a></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      pathToNineSpecs: [
+        { label: 'Medium', value: 'Gilded cast units, stainless steel rods' },
+        { label: 'Components', value: 'Under studio verification — published counts conflict' },
+        { label: 'Structure', value: '54 ingots per stack; rods span 9 ingots in 3 rows' },
+        { label: 'Exhibited', value: 'Solid Gold, Brooklyn Museum, 2024–25' },
+        { label: 'Status', value: 'Unique' },
+      ],
+      chapterChronology: [
+        { year: '1978', text: 'Gold Bricks, Tehran — the unit introduced; reportedly lost during the Iranian Revolution.' },
+        { year: '1978', text: 'Special Projects, MoMA PS1, New York.' },
+        { year: '2024', text: 'Path to Nine shown in Solid Gold, Brooklyn Museum.' },
+        { year: '2025', text: 'Made in USA, Independent 20th Century, New York — 160 gold-on-plaster units.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

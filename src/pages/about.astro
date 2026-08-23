@@ -1,46 +1,89 @@
 ---
+import ArtworkImage from '../components/ArtworkImage.astro';
 import EditorialNote from '../components/EditorialNote.astro';
+import SectionHeading from '../components/SectionHeading.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lifeEntries = [
+  ['Origin', 'Birth details and early chronology remain withheld pending one approved record.'],
+  ['Training', 'Exact institutions, dates, and source wording require owner review.'],
+  ['Practice', 'Material, structure, repetition, scale, and transformation are retained as editorial themes.'],
+  ['Current', 'Location, affiliation, representation, and project status are not published in this preview.'],
+];
+const recordEntries = [
+  ['Exhibitions', 'Titles, venues, roles, locations, and dates will come from the verified CV dataset.'],
+  ['Collections', 'Ownership will be listed only when acquisition or holding is independently confirmed.'],
+  ['Collaborations', 'Attribution and historical context require source-specific editorial approval.'],
+  ['Media', 'Portrait and archival images require owner masters, credits, and public-web rights.'],
+];
 ---
 <BaseLayout
-  title="About — Preview treatment"
-  description="A biography and artist-statement treatment for the noindex Zadik Zadikian website preview; disputed details are withheld."
+  title="About — Biography preview"
+  description="A biography and artist-statement hub implementing the supplied design while disputed details and portrait rights remain withheld."
 >
   <div class="page-shell">
-    <header class="page-header">
-      <div>
-        <p class="eyebrow">Biography treatment · editorial placeholder</p>
-        <h1>About</h1>
-      </div>
-      <p class="page-header__intro">A calm, readable biography framework that distinguishes approved practice language from chronology still under review.</p>
+    <header class="about-header">
+      <p class="eyebrow">Artist · biography and voice</p>
+      <h1>About</h1>
     </header>
 
-    <section class="content-section" aria-labelledby="biography-heading">
-      <h2 id="biography-heading" class="visually-hidden">Biography direction</h2>
-      <div class="about-grid">
-        <p class="about-grid__lead">The source material associates Zadikian's practice with gold, repeated form, architecture, scale, labor, and displacement.</p>
-        <div class="about-grid__body">
-          <p>This preview stops there deliberately. A production biography should be concise, factual, and linked to source-reviewed chronology—not reconstructed from conflicting public pages.</p>
-          <p>Birth details, early-life chronology, studio history, personal relationships, and current professional affiliations are withheld until authorized editorial review is complete.</p>
+    <section class="about-biography" aria-labelledby="biography-heading">
+      <div class="about-biography__copy">
+        <h2 id="biography-heading" class="visually-hidden">Biography direction</h2>
+        <p class="about-biography__lede">A concise biography should let verified chronology and the material record carry the argument.</p>
+        <p>The source material associates Zadikian’s practice with gold, repeated form, architecture, scale, labor, and displacement. This preview preserves that approved high-level boundary without reconstructing a life story from conflicting public sources.</p>
+        <p>Birth details, migration chronology, studio history, current residence, personal relationships, representation, and current-project status remain withheld until authorized editorial review produces one source of truth.</p>
+        <div class="button-row">
+          <a class="button-link" href="/cv/">View CV structure</a>
+          <a class="text-link" href="/artist-statement/">Artist statement <span aria-hidden="true">→</span></a>
         </div>
       </div>
-      <ul class="theme-list" aria-label="Themes identified for editorial review">
-        <li>Material</li>
-        <li>Structure</li>
-        <li>Transformation</li>
-      </ul>
+      <div class="about-biography__portrait">
+        <ArtworkImage
+          mediaId="img-fixture-threshold-portrait-v1"
+          placementId="placement-about-portrait"
+          sizes="(max-width: 56rem) calc(100vw - 4rem), 36vw"
+          loading="lazy"
+          fit="cover"
+        />
+        <p class="eyebrow">Reserved portrait placement · photographer credit and rights pending</p>
+      </div>
     </section>
 
-    <section class="content-section" aria-labelledby="statement-treatment-heading">
-      <div class="section-heading">
-        <p class="eyebrow">Artist voice</p>
-        <h2 id="statement-treatment-heading">Statement, with clear authorship.</h2>
-        <p>The final page can separate a dated first-person statement from third-person biography and external criticism. This preview does not reproduce unapproved source prose.</p>
+    <section class="content-section" aria-labelledby="chronology-heading">
+      <SectionHeading
+        id="chronology-heading"
+        label="Life and exhibition record · verification architecture"
+        title="Chronology"
+        index="Review pending"
+      />
+      <div class="chronology-grid">
+        <section aria-labelledby="life-work-heading">
+          <h3 id="life-work-heading" class="list-heading">Life and work</h3>
+          <dl class="chronology-list">
+            {lifeEntries.map(([term, description]) => <div><dt>{term}</dt><dd>{description}</dd></div>)}
+          </dl>
+        </section>
+        <section aria-labelledby="record-evidence-heading">
+          <h3 id="record-evidence-heading" class="list-heading">Record and evidence</h3>
+          <dl class="chronology-list">
+            {recordEntries.map(([term, description]) => <div><dt>{term}</dt><dd>{description}</dd></div>)}
+          </dl>
+        </section>
       </div>
-      <EditorialNote title="Editorial verification in progress">
-        <p>No birth year, private location, contact address, dealer claim, or unresolved project status appears in this treatment.</p>
-        <p>Final copy will require author approval, source attribution where applicable, and a recorded review date.</p>
-      </EditorialNote>
+    </section>
+
+    <section class="content-section collections-note" aria-labelledby="collections-heading">
+      <div>
+        <p class="eyebrow">Documented collections</p>
+        <h2 id="collections-heading">Exhibition history is not collection history.</h2>
+      </div>
+      <div>
+        <p>Institutions will appear as collections only when ownership or acquisition is independently confirmed. The future chronology and downloadable CV must derive from the same reviewed records.</p>
+        <EditorialNote title="Editorial verification in progress">
+          <p>No birth year, private location, contact address, dealer claim, or unresolved project status appears in this implementation.</p>
+        </EditorialNote>
+      </div>
     </section>
   </div>
 </BaseLayout>

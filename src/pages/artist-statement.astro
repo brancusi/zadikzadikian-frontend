@@ -1,0 +1,68 @@
+---
+import EditorialNote from '../components/EditorialNote.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const lenses = [
+  ['Figure and ground', 'A future approved statement may distinguish recognizable form from the spatial field without forcing a linear career narrative.'],
+  ['Room and unit', 'Architecture, repeated form, and interval remain useful editorial structures; exact historical examples require verified records.'],
+  ['Surface and material', 'Gold, gravity, color, casting, and touch are research terms, not a license to invent artist voice or object facts.'],
+  ['Body and process', 'Figure, portrait, and process require both editorial context and heightened rights review before publication.'],
+  ['Open structure', 'The delivered design frames change and recombination as a current lens while project status remains withheld.'],
+  ['Authorship', 'First-person language publishes only with artist approval, a date, and a clear distinction from biography and criticism.'],
+];
+---
+<BaseLayout
+  title="Artist statement — Approval preview"
+  description="An artist-statement reading structure for the noindex Zadik Zadikian preview. The supplied first-person draft remains unpublished pending approval."
+>
+  <div class="page-shell">
+    <header class="statement-header">
+      <div class="statement-header__meta">
+        <p class="eyebrow">Artist statement · authorship gate</p>
+        <p class="eyebrow">Approval pending</p>
+      </div>
+      <h1>Artist statement</h1>
+    </header>
+
+    <section class="statement-body" aria-labelledby="statement-direction-heading">
+      <div class="statement-body__copy">
+        <h2 id="statement-direction-heading">Between the body and the unit</h2>
+        <p class="statement-body__lede">The design team supplied a newly composed first-person statement and explicitly marked artist approval as required before publication.</p>
+        <p>The complete draft is retained byte-for-byte in the private source revision. It is not reproduced here, paraphrased as the artist’s words, or silently merged into biography.</p>
+        <p>This implemented route instead proves the intended reading measure, hierarchy, side note, authorship label, and relationship to a separate third-person work statement.</p>
+        <p>When approval exists, the final record should carry the approved text, author, date, revision source, and any limits on reuse.</p>
+      </div>
+      <aside class="statement-aside" aria-label="Statement publication status">
+        <blockquote>“Artist voice requires artist approval.”</blockquote>
+        <div>
+          <p class="eyebrow">Publication status</p>
+          <p>Draft privately retained.<br />Public wording withheld.<br />No press-use version offered.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="content-section" aria-labelledby="work-statement-heading">
+      <SectionHeading
+        id="work-statement-heading"
+        label="Work statement · curatorial structure"
+        title="The open structure"
+        index="§"
+      >
+        <p>A third-person text can eventually place verified work in context without being confused with the artist’s own voice.</p>
+      </SectionHeading>
+      <div class="statement-lenses">
+        {lenses.map(([title, description]) => (
+          <article><h3>{title}</h3><p>{description}</p></article>
+        ))}
+      </div>
+    </section>
+
+    <section class="content-section" aria-labelledby="statement-boundary-heading">
+      <h2 id="statement-boundary-heading" class="visually-hidden">Statement publication boundary</h2>
+      <EditorialNote title="Authorship boundary">
+        <p>The private design source is evidence of design and editorial intent, not public approval. The launch statement requires a recorded decision by the artist or authorized owner.</p>
+      </EditorialNote>
+    </section>
+  </div>
+</BaseLayout>

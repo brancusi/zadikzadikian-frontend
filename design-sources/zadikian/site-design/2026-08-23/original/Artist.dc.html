@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/base.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/styles.css">
+  <script src="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_bundle.js"></script>
+  <script src="image-slot.js"></script>
+  <style>
+    body{margin:0;background:var(--paper);color:var(--ink)}
+    a{color:var(--link);text-decoration:none;transition:color .18s ease}
+    a:hover{color:var(--gold)}
+  </style>
+</helmet>
+<div data-screen-label="Artist" style="background:var(--paper);min-height:100vh">
+  <nav style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;padding:22px clamp(32px,7vw,120px);border-bottom:1px solid var(--rule)">
+    <a href="Home.dc.html" style="font-family:var(--font-serif-display);font-size:21px;letter-spacing:-0.01em">Zadik Zadikian</a>
+    <div style="display:flex;gap:32px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="Work.dc.html">Work</a>
+      <a href="Artist.dc.html" style="color:var(--gold)">Artist</a>
+      <a href="Statements.dc.html">Statements</a>
+      <a href="Information.dc.html">Information</a>
+    </div>
+  </nav>
+  <header data-screen-label="Biography head" style="padding:clamp(56px,9vw,120px) clamp(32px,7vw,120px) clamp(40px,6vw,72px)">
+    <h1 style="font-family:var(--font-serif-display);font-weight:400;font-size:var(--text-colossal);line-height:1.02;letter-spacing:-0.015em;margin:0">Biography</h1>
+  </header>
+  <section data-screen-label="Biography" style="padding:0 clamp(32px,7vw,120px) clamp(56px,9vw,120px)">
+    <div style="display:grid;grid-template-columns:minmax(300px,1.5fr) minmax(260px,1fr);gap:64px;align-items:start">
+      <div>
+        <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-lede);line-height:1.6;color:var(--ink)">Zadik Zadikian (b. 1948, Yerevan) trained in figurative sculpture in Soviet Armenia, where the body was approached as a complete and recognizable form. He left Armenia in 1965, continued his studies in Rome, and by the early 1970s was working inside New York's experimental field of Minimalism and post-Minimalism.</p>
+        <p style="margin:20px 0 0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">At 112 Greene Street in 1973 he painted a room and its fixtures pale yellow, treating architecture as the medium of a total visual condition. MoMA PS1 records a 1974 <em>Billboard Painting</em> and later appearances in Special Projects and The New Portrait. Richard Serra described <em>Abstract Slavery</em> as a collective effort by Zadikian, Tony Shafrazi, and himself — documented proximity, labor, and technical exchange at a formative moment.</p>
+        <p style="margin:20px 0 0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">From the mid-1970s, gold extended the transformation of space: gilded interiors, then the 1978 Gold Bricks in Tehran — a portable unit whose stacks he has revisited over five decades. Figuration returned under pressure through portraits, casts, and the gravity-formed faces of <em>Foreigners</em>. Recent years brought a renewed institutional sequence: the Brooklyn Museum, Independent 20th Century, a return exhibition in Yerevan, and the Armenian Pavilion at the 61st Venice Biennale.</p>
+        <div style="margin-top:32px;display:flex;gap:16px;flex-wrap:wrap">
+          <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Button" variant="outline" href="Information.dc.html#press" hint-size="auto,48px">Download CV</x-import>
+          <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.Button" variant="text" href="Statements.dc.html" hint-size="auto,48px">Read the statement</x-import>
+        </div>
+      </div>
+      <figure style="margin:0">
+        <div style="height:420px"><image-slot id="artist-portrait" shape="rect" placeholder="Portrait of the artist in the studio"></image-slot></div>
+        <figcaption style="margin-top:12px;font-family:var(--font-grotesque);font-size:11px;color:var(--ink-3)">The artist in the studio. Photographer credit pending.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section data-screen-label="Chronology" style="padding:0 clamp(32px,7vw,120px) clamp(56px,9vw,120px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Verified life and exhibition chronology" index="1948 — 2026" title="Chronology" hint-size="100%,180px"></x-import>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:64px;margin-top:48px">
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.CVList" heading="Life and work" entries="{{ lifeEntries }}" hint-size="100%,480px"></x-import>
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.CVList" heading="Selected exhibitions" entries="{{ exhibitionEntries }}" hint-size="100%,480px"></x-import>
+    </div>
+  </section>
+  <section data-screen-label="Collections" style="padding:0 clamp(32px,7vw,120px) clamp(80px,12vw,160px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:64px">
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.CVList" heading="Documented collections" entries="{{ collectionEntries }}" hint-size="100%,200px"></x-import>
+      <div style="border-top:2px solid var(--ink);padding-top:16px">
+        <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">A note on this record</div>
+        <p style="margin:16px 0 0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">Exhibition history is not collection history. Institutions are listed as collections only where acquisition or ownership is independently confirmed. The full chronology, with verification sources, is available as a PDF from the press resources.</p>
+      </div>
+    </div>
+  </section>
+  <footer style="border-top:2px solid var(--ink);padding:40px clamp(32px,7vw,120px) 56px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.08em;color:var(--ink-3)">
+    <span>All works © Zadik Zadikian. Reproduction by permission.</span>
+    <div style="display:flex;gap:24px"><a href="Home.dc.html">Home</a><a href="Work.dc.html">Work</a><a href="Information.dc.html">Contact</a></div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      lifeEntries: [
+        { year: '1948', text: 'Born in Yerevan, Soviet Armenia. Intensive childhood study of sculpture; construction learned alongside his father.' },
+        { year: '1965', text: 'Leaves Soviet Armenia; continues study in Rome.' },
+        { year: '1970s', text: 'Establishes a studio in New York within the experimental field of Minimalism and post-Minimalism.' },
+        { year: '1974–75', text: 'Abstract Slavery — collective work with Richard Serra and Tony Shafrazi; the paintstick-block discovery.' },
+        { year: '1978', text: 'Gold Bricks, Tehran; the works are reportedly lost during the Iranian Revolution.' },
+        { year: '2025–26', text: 'Returns to Armenia for RETURN, Cafesjian Center for the Arts, and the Armenian Pavilion in Venice.' },
+      ],
+      exhibitionEntries: [
+        { year: '1973', text: '112 Greene Street, New York — total-room intervention (White Columns archive).' },
+        { year: '1974', text: 'Billboard Painting, MoMA PS1, New York.' },
+        { year: '1978', text: 'Special Projects, MoMA PS1, New York.' },
+        { year: '1984', text: 'The New Portrait, MoMA PS1, New York.' },
+        { year: '1985', text: 'Newport Harbor Art Museum, California (solo).' },
+        { year: '2024–25', text: 'Solid Gold, Brooklyn Museum, New York.' },
+        { year: '2025', text: 'Made in USA, Independent 20th Century, New York.' },
+        { year: '2025–26', text: 'RETURN, Cafesjian Center for the Arts, Yerevan (solo).' },
+        { year: '2026', text: 'The Studio, Armenian Pavilion, 61st Venice Biennale.' },
+      ],
+      collectionEntries: [
+        { year: '1986', text: 'The Greek — Martin Z. Margulies Family Collection, Miami.' },
+        { year: '2001', text: 'Caravan Exhibition Maquette — Cafesjian family collections and archives, Yerevan.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

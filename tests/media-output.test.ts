@@ -11,7 +11,7 @@ describe('static image and video presentation output', () => {
 
     expect(home).toContain('<picture class="artwork-image__picture"');
     expect(home).toMatch(/srcset="[^"]+ 320w,[^"]+ 1440w"/);
-    expect(home).toContain('sizes="(max-width: 56rem) 100vw, 54vw"');
+    expect(home).toContain('sizes="100vw"');
     expect(home).toMatch(/width="1440" height="1080"/);
     expect(home).toContain('media="(max-width: 42rem)"');
     expect((home.match(/loading="eager"/g) ?? []).length).toBe(1);
@@ -21,12 +21,15 @@ describe('static image and video presentation output', () => {
 
   it('uses contextual alt for informative images and empty alt for linked decorative studies', () => {
     const home = html('');
+    const work = html('work');
     const hero = home.match(/<img [^>]+loading="eager"[^>]*>/)?.[0] ?? '';
-    const lazyImages = home.match(/<img [^>]+loading="lazy"[^>]*>/g) ?? [];
+    const homeLazyImages = home.match(/<img [^>]+loading="lazy"[^>]*>/g) ?? [];
+    const workLazyImages = work.match(/<img [^>]+loading="lazy"[^>]*>/g) ?? [];
 
     expect(hero).toContain('alt="Abstract design study:');
-    expect(lazyImages.length).toBeGreaterThan(0);
-    lazyImages.forEach((image) => expect(image).toMatch(/\salt(?:="")?(?:\s|>)/));
+    expect(homeLazyImages.length).toBeGreaterThan(0);
+    homeLazyImages.forEach((image) => expect(image).toMatch(/\salt="[^"]+"/));
+    expect(workLazyImages.some((image) => /\salt(?:="")?(?:\s|>)/.test(image))).toBe(true);
   });
 
   it('keeps gallery browsing in ordinary links and works without scripts', () => {

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/tokens/base.css">
+  <link rel="stylesheet" href="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/styles.css">
+  <script src="_ds/zadikian-design-system-41ec0e31-0915-4736-b4e0-e56991f831c2/_ds_bundle.js"></script>
+  <script src="image-slot.js"></script>
+  <style>
+    body{margin:0;background:var(--paper);color:var(--ink)}
+    a{color:var(--link);text-decoration:none;transition:color .18s ease}
+    a:hover{color:var(--gold)}
+  </style>
+</helmet>
+<div data-screen-label="Home" style="background:var(--paper);min-height:100vh">
+  <sc-if value="{{ showVeniceBanner }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;justify-content:center;gap:12px;padding:10px clamp(32px,7vw,120px);border-bottom:1px solid var(--rule);font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-2)">
+      <span>The Studio — Armenian Pavilion, 61st Venice Biennale, April to November 2026</span>
+      <a href="Work.dc.html#open-structure" style="color:var(--gold)">View →</a>
+    </div>
+  </sc-if>
+  <nav style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:16px;padding:22px clamp(32px,7vw,120px);border-bottom:1px solid var(--rule)">
+    <a href="Home.dc.html" style="font-family:var(--font-serif-display);font-size:21px;letter-spacing:-0.01em">Zadik Zadikian</a>
+    <div style="display:flex;gap:32px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">
+      <a href="Work.dc.html">Work</a>
+      <a href="Artist.dc.html">Artist</a>
+      <a href="Statements.dc.html">Statements</a>
+      <a href="Information.dc.html">Information</a>
+    </div>
+  </nav>
+  <section data-screen-label="Opening image">
+    <img src="assets/web/A-015.jpg" alt="The Studio, installation view" style="display:block;width:100%;height:auto">
+    <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:16px clamp(32px,7vw,120px);border-bottom:1px solid var(--rule);font-family:var(--font-grotesque);font-size:11px;line-height:1.5;color:var(--ink-3)">
+      <span><em style="font-family:var(--font-serif-text);color:var(--ink);font-style:italic">The Studio</em>, 2026. Pigmented cast plaster, movable units. Installation view, Armenian Pavilion, 61st Venice Biennale.</span>
+      <span style="letter-spacing:0.08em">A-015</span>
+    </div>
+  </section>
+  <section data-screen-label="Thesis" style="padding:clamp(64px,10vw,160px) clamp(32px,7vw,120px) clamp(48px,8vw,120px)">
+    <h1 style="font-family:var(--font-serif-display);font-weight:400;font-size:var(--text-colossal);line-height:1.02;letter-spacing:-0.015em;margin:0;max-width:14ch;text-wrap:balance">Matter in formation</h1>
+    <p style="font-family:var(--font-serif-text);font-size:var(--text-lede);line-height:1.6;color:var(--ink-2);max-width:62ch;margin:40px 0 0">Zadik Zadikian works between body and system, joining figurative sculpture to room-scale fields, serial structures, gravity-formed faces, and movable blocks. Across seven decades, the work asks how singular forms can share a structure without becoming the same.</p>
+    <p style="font-family:var(--font-grotesque);font-size:13px;line-height:1.5;color:var(--ink-3);max-width:62ch;margin:24px 0 0">Developed within the experimental New York field of Minimalism and post-Minimalism, then extended through gold, gravity, the human figure, and the open structure.</p>
+  </section>
+  <section data-screen-label="Five chapters" style="padding:0 clamp(32px,7vw,120px) clamp(64px,10vw,160px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="The work in five chapters" index="1948 — 2026" title="A retrospective path" hint-size="100%,180px"></x-import>
+    <div style="display:grid;grid-template-columns:1fr;gap:0;margin-top:56px">
+      <a href="Work.dc.html#ground" style="display:grid;grid-template-columns:minmax(180px,1fr) minmax(280px,1.6fr) minmax(300px,1.4fr);gap:40px;align-items:start;padding:40px 0;border-top:1px solid var(--rule)">
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">I — 1950s to 1970</div>
+          <div style="font-family:var(--font-serif-display);font-size:var(--text-headline);line-height:1.12;margin-top:12px">Ground</div>
+        </div>
+        <div style="height:220px"><image-slot id="home-ground" shape="rect" placeholder="Archival image — early figure, Yerevan academy"></image-slot></div>
+        <div>
+          <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">Childhood study and academy training in Yerevan establish the practice's enduring measure: the human body. Clay, plaster, mold, and support are learned through bodily making and a builder's intelligence — a command of recognizable form the later work never abandons.</p>
+          <span style="display:inline-block;margin-top:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">Figures · Portraits · Studies →</span>
+        </div>
+      </a>
+      <a href="Work.dc.html#field" style="display:grid;grid-template-columns:minmax(180px,1fr) minmax(280px,1.6fr) minmax(300px,1.4fr);gap:40px;align-items:start;padding:40px 0;border-top:1px solid var(--rule)">
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">II — 1973 to 1978</div>
+          <div style="font-family:var(--font-serif-display);font-size:var(--text-headline);line-height:1.12;margin-top:12px">Field</div>
+        </div>
+        <div style="height:220px"><image-slot id="home-field" shape="rect" placeholder="Archival image — 112 Greene Street, 1973"></image-slot></div>
+        <div>
+          <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">In early-1970s New York, sculpture becomes a condition of space. At 112 Greene Street in 1973, Zadikian paints a room and its fixtures pale yellow; gilded interiors follow. Architecture itself becomes the medium of a total visual condition.</p>
+          <span style="display:inline-block;margin-top:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">Spaces · Solis →</span>
+        </div>
+      </a>
+      <a href="Unit-Structure.dc.html" style="display:grid;grid-template-columns:minmax(180px,1fr) minmax(280px,1.6fr) minmax(300px,1.4fr);gap:40px;align-items:start;padding:40px 0;border-top:1px solid var(--rule)">
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">III — 1975 onward</div>
+          <div style="font-family:var(--font-serif-display);font-size:var(--text-headline);line-height:1.12;margin-top:12px">Unit</div>
+        </div>
+        <div style="height:220px"><image-slot id="home-unit" shape="rect" placeholder="Archival image — gold stacks"></image-slot></div>
+        <div>
+          <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">The building block becomes portable sculpture. The 1978 Tehran gold bricks introduce a unit whose identity shifts through casting, gilding, stacking, and spacing. Repetition builds without fixing a final architecture; the gaps matter as much as the mass.</p>
+          <span style="display:inline-block;margin-top:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">Stacks · Path to Nine · Made in USA →</span>
+        </div>
+      </a>
+      <a href="Work.dc.html#body" style="display:grid;grid-template-columns:minmax(180px,1fr) minmax(280px,1.6fr) minmax(300px,1.4fr);gap:40px;align-items:start;padding:40px 0;border-top:1px solid var(--rule)">
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">IV — 1980s onward</div>
+          <div style="font-family:var(--font-serif-display);font-size:var(--text-headline);line-height:1.12;margin-top:12px">Body</div>
+        </div>
+        <div style="height:220px"><image-slot id="home-body" shape="rect" placeholder="Archival image — Foreigners, gravity-formed faces"></image-slot></div>
+        <div>
+          <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">Portraits, fragments, erotic studies, and casts return recognizable form without abandoning process. In Foreigners, wet clay is lifted and thrown; faces emerge through impact, gravity, and repetition — the figure held at the edge of abstraction.</p>
+          <span style="display:inline-block;margin-top:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">Foreigners · Shell cast · La Brea →</span>
+        </div>
+      </a>
+      <a href="Work.dc.html#open-structure" style="display:grid;grid-template-columns:minmax(180px,1fr) minmax(280px,1.6fr) minmax(300px,1.4fr);gap:40px;align-items:start;padding:40px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">V — 2024 onward</div>
+          <div style="font-family:var(--font-serif-display);font-size:var(--text-headline);line-height:1.12;margin-top:12px">Open structure</div>
+        </div>
+        <div style="height:220px;overflow:hidden"><img src="assets/web/A-028.jpg" alt="Pigmented plaster units" style="display:block;width:100%;height:100%;object-fit:cover"></div>
+        <div>
+          <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">Monumental stacks reactivate the historical unit. At the 2026 Armenian Pavilion, pigment-infused movable blocks are cast and rearranged in public: from a common surface to a common procedure, sculpture as a state of formation.</p>
+          <span style="display:inline-block;margin-top:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase">Waves · Pigment blocks · The Studio →</span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <sc-if value="{{ showHistoricalBand }}" hint-placeholder-val="{{ true }}">
+    <section data-screen-label="Historical anchor" style="padding:0 clamp(32px,7vw,120px) clamp(64px,10vw,160px)">
+      <div style="border-top:2px solid var(--ink);padding-top:16px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">Inside the New York field</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-top:40px">
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">1973</div>
+          <div style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.5;margin-top:8px">112 Greene Street — a room and its fixtures painted pale yellow. White Columns archive.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">1974</div>
+          <div style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.5;margin-top:8px"><em>Billboard Painting</em>, MoMA PS1. Official exhibition record.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">1974–75</div>
+          <div style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.5;margin-top:8px"><em>Abstract Slavery</em> — collective work with Richard Serra and Tony Shafrazi, documented by Serra.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">1984</div>
+          <div style="font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.5;margin-top:8px"><em>The New Portrait</em>, MoMA PS1 — the return of the figure inside a major New York conversation.</div>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+  <section data-screen-label="Current work" style="padding:0 clamp(32px,7vw,120px) clamp(64px,10vw,160px)">
+    <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.SectionHeading" label="Current work — Venice, 2026" index="§" title="The Studio" hint-size="100%,180px"></x-import>
+    <div style="display:grid;grid-template-columns:minmax(320px,1.6fr) minmax(280px,1fr);gap:56px;align-items:end;margin-top:56px">
+      <div>
+        <img src="assets/web/A-009.jpg" alt="Pigmented cast plaster units, The Studio" style="display:block;width:100%;height:auto">
+        <div style="margin-top:12px;font-family:var(--font-grotesque);font-size:11px;line-height:1.5;color:var(--ink-3)"><em style="font-family:var(--font-serif-text);color:var(--ink)">Untitled (pigment blocks)</em>, 2025–26. Pigmented cast plaster. Studio inventory A-009.</div>
+      </div>
+      <div>
+        <p style="margin:0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">At the Armenian Pavilion, the studio itself becomes the work: casting, touch, labor, assembly, and rearrangement made visible. Pigment-infused movable units are produced and reconfigured in public over the course of the Biennale — a continuation of fifty years of casting, blocks, and serial form.</p>
+        <p style="margin:16px 0 0;font-family:var(--font-serif-text);font-size:var(--text-body);line-height:1.62;color:var(--ink-2)">Color does not cancel the gold period. It changes the terms of unification: gold gave unlike forms a common optical register; color lets a common structure remain multiple, provisional, and open to participation.</p>
+        <div style="margin-top:24px"><a href="Work.dc.html#open-structure" style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px">View the chapter →</a></div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Institutional sequence" style="padding:0 clamp(32px,7vw,120px) clamp(64px,10vw,160px)">
+    <div style="border-top:2px solid var(--ink);padding-top:16px;display:flex;justify-content:space-between;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)"><span>Recent institutional sequence</span><span>2024 — 2026</span></div>
+    <div style="margin-top:32px">
+      <div style="display:grid;grid-template-columns:110px 1fr auto;gap:32px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline">
+        <span style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">2024–25</span>
+        <span style="font-family:var(--font-serif-text);font-size:var(--text-body)"><em>Path to Nine</em> in Solid Gold, Brooklyn Museum, New York</span>
+        <span style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">Group exhibition</span>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 1fr auto;gap:32px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline">
+        <span style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">2025</span>
+        <span style="font-family:var(--font-serif-text);font-size:var(--text-body)"><em>Made in USA</em>, Independent 20th Century, New York</span>
+        <span style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">Presentation</span>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 1fr auto;gap:32px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline">
+        <span style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">2025–26</span>
+        <span style="font-family:var(--font-serif-text);font-size:var(--text-body)"><em>RETURN</em>, Cafesjian Center for the Arts, Yerevan</span>
+        <span style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">Solo exhibition</span>
+      </div>
+      <div style="display:grid;grid-template-columns:110px 1fr auto;gap:32px;padding:14px 0;border-bottom:1px solid var(--rule);align-items:baseline">
+        <span style="font-family:var(--font-grotesque);font-size:13px;color:var(--ink-3)">2026</span>
+        <span style="font-family:var(--font-serif-text);font-size:var(--text-body)"><em>The Studio</em>, Armenian Pavilion, 61st Venice Biennale</span>
+        <span style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">National pavilion</span>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Latest text" style="padding:0 clamp(32px,7vw,120px) clamp(80px,12vw,200px)">
+    <div style="display:grid;grid-template-columns:minmax(280px,1fr) minmax(320px,1.4fr);gap:56px;align-items:start">
+      <x-import component-from-global-scope="ZadikianDesignSystem_41ec0e.PullQuote" quote="I am always trying to distill away the idea of finishing." attribution="Zadik Zadikian" source="Artist text, Stacks" hint-size="100%,220px"></x-import>
+      <div style="border-top:1px solid var(--rule);padding-top:24px">
+        <div style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)">Latest text</div>
+        <p style="margin:16px 0 0;font-family:var(--font-serif-text);font-size:var(--text-lede);line-height:1.5">In conversation with Canvas, the artist recounts training in Yerevan, the New York field, gold, blocks, touch, and the transition to color.</p>
+        <div style="margin-top:20px"><a href="Statements.dc.html" style="font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:3px">Read statements →</a></div>
+      </div>
+    </div>
+  </section>
+  <footer style="border-top:2px solid var(--ink);padding:56px clamp(32px,7vw,120px) 72px">
+    <div style="display:grid;grid-template-columns:minmax(300px,1.6fr) minmax(200px,1fr) minmax(200px,1fr);gap:56px">
+      <div>
+        <div style="font-family:var(--font-serif-display);font-size:var(--text-title)">Zadik Zadikian</div>
+        <p style="margin:16px 0 0;font-family:var(--font-grotesque);font-size:13px;line-height:1.6;color:var(--ink-2);max-width:52ch">Zadik Zadikian works between body and system, joining figurative sculpture to room-scale fields, serial structures, gravity-formed faces, and movable blocks. Repetition reveals difference rather than suppressing it; gold creates a common surface without erasing irregularity.</p>
+      </div>
+      <div style="font-family:var(--font-grotesque);font-size:13px;line-height:2.1">
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px">Site</div>
+        <div style="display:grid;gap:2px"><a href="Work.dc.html">Work</a><a href="Artist.dc.html">Artist</a><a href="Statements.dc.html">Statements</a><a href="Information.dc.html">Information</a></div>
+      </div>
+      <div style="font-family:var(--font-grotesque);font-size:13px;line-height:2.1">
+        <div style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px">Contact</div>
+        <div style="display:grid;gap:2px"><a href="Information.dc.html">Studio & loans</a><a href="Information.dc.html#press">Press resources</a><a href="http://instagram.com/zadikzadikian">Instagram ↗</a></div>
+      </div>
+    </div>
+    <div style="margin-top:56px;padding-top:16px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:var(--font-grotesque);font-size:11px;letter-spacing:0.08em;color:var(--ink-3)">
+      <span>All works © Zadik Zadikian. Reproduction by permission.</span>
+      <span>Design mock-up — content pending studio verification</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showVeniceBanner&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Modules&quot;},&quot;showHistoricalBand&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Modules&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showVeniceBanner: this.props.showVeniceBanner ?? true,
+      showHistoricalBand: this.props.showHistoricalBand ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>

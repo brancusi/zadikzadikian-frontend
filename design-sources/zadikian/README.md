@@ -1,18 +1,21 @@
-# Preserved Zadikian design-system source
+# Preserved Zadikian design sources
 
-This directory retains the complete private design reference supplied by the captain/team and authorized by them for repository retention. The verified `Zadikian-Design-System.zip` contained **75 files / 2,456,068 bytes**; every archive entry is preserved byte-for-byte under [`original/`](./original/).
+This directory retains two complete, private, captain-authorized references:
+
+1. the original design system: `Zadikian-Design-System.zip`, **75 files / 2,456,068 bytes**, preserved byte-for-byte under [`original/`](./original/); and
+2. the complete site-design delivery dated 23 August 2026: **36 files / 2,756,592 bytes**, preserved under [`site-design/2026-08-23/original/`](./site-design/2026-08-23/original/) with its own [README](./site-design/2026-08-23/README.md) and deterministic manifests.
 
 ## Boundaries
 
-- `original/` is immutable source/reference material. Do not edit it in place, execute its JavaScript, install its dependencies, or connect it to the production build.
-- All proposal copy, contacts, runtime files, examples, screenshots/thumbnails, exports, and artwork are retained for private reference—not adopted as site content.
-- In particular, `original/assets/web/*.jpg` is **reference-only / not cleared for public use**. The archive contains no explicit artwork or photography license. Fonts are referenced but no font files or license were supplied. Public use of any source asset still requires [`docs/media-intake.md`](../../docs/media-intake.md), [`CONTENT-LICENSE.md`](../../CONTENT-LICENSE.md), and the repository media/license gate.
-- The reviewed production adaptation remains the summarized contract in [`docs/design-system.md`](../../docs/design-system.md), the token implementation in [`src/styles/tokens.css`](../../src/styles/tokens.css), and reusable Astro components in [`src/components/`](../../src/components/). Future design work must consult both this complete source and that summarized contract.
+- Both preserved `original/` trees are immutable source/reference material. Do not edit them in place, execute their JavaScript, install dependencies from them, or connect them to the production build.
+- All proposal/site copy, contacts, runtime files, examples, screens, screenshots/thumbnails, exports, documents, and artwork are retained for private reference—not automatically adopted as site content.
+- Every preserved `assets/web/*.jpg` is **reference-only / not cleared for public use**. Neither delivery contains an explicit artwork/photography license, complete credit, or public-web permission. Fonts are referenced but no font files or license were supplied. Public use still requires [`docs/media-intake.md`](../../docs/media-intake.md), [`CONTENT-LICENSE.md`](../../CONTENT-LICENSE.md), and the repository media/license gate.
+- The reviewed production adaptation remains the summarized contract in [`docs/design-system.md`](../../docs/design-system.md), implementation record in [`docs/site-design-implementation.md`](../../docs/site-design-implementation.md), token implementation in [`src/styles/tokens.css`](../../src/styles/tokens.css), reusable Astro components, and pages. Future visual work must consult the complete design system, the complete latest site design, the summarized contract, and the Astro implementation.
 
-[`source-manifest.json`](./source-manifest.json) records archive provenance, safety results, and each retained path, byte size, Git mode, and SHA-256. [`exclusions.json`](./exclusions.json) records every exclusion. The only excluded artifact was the downloaded ZIP transport container itself: there were no excluded archive entries, unsafe/special paths, credentials, OS metadata, dependency caches, or Git-unsafe entries. Hidden `.thumbnail` files and all nine artwork JPEGs are intentionally retained.
+The root [`source-manifest.json`](./source-manifest.json) and [`exclusions.json`](./exclusions.json) guard the design-system delivery. The site-design revision has separate [source](./site-design/2026-08-23/source-manifest.json) and [exclusion](./site-design/2026-08-23/exclusions.json) manifests, including its unsafe Dropbox wrapper finding and recursively reviewed DOCX containers.
 
-Run `pnpm validate:design-sources` (also part of the normal check/build/test/validate paths) to detect changes, deletions, mode changes, or additions.
+Run `pnpm validate:design-sources` (also part of normal check/build/test/validate paths) to detect changes, deletions, mode changes, or additions in both immutable source trees.
 
 ## Later revisions
 
-Never replace or rewrite `original/` or its manifests. Intake a later captain-authorized archive with the same hash, safety, credential, and license review; preserve it under a separately identified sibling revision; add revision-specific deterministic manifests and exclusions; then review any production-contract change separately. This keeps each source revision and its provenance intact.
+Never replace or rewrite either retained revision or its manifests. Intake a later captain-authorized delivery with the same hash, recursive safety, credential, and license review; preserve it under a separately identified dated sibling revision; add deterministic manifests and exclusions; then review production-contract and implementation changes separately. This keeps every source revision and its provenance intact.
