@@ -24,8 +24,8 @@
     "sharp": "0.35.3"
   },
   "devDependencies": {
-    "@astrojs/check": "0.9.10",
-    "html-validate": "11.10.0",
+    "@astrojs/check": "0.9.12",
+    "html-validate": "11.17.0",
     "typescript": "6.0.3",
     "vitest": "4.1.11"
   }
